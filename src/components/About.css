@@ -1,0 +1,71 @@
+/* About.css */
+.about {
+  padding: 4rem 2rem;
+  background-color: #faf0eb;
+  color: #333;
+}
+
+/* Using a container that spans 90% of the viewport with a higher maximum width */
+.about-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* About Me main content area */
+.about-content {
+  flex: 0 0 75%;
+}
+
+/* About me sidebar for contact info and resume */
+.about-sidebar {
+  flex: 0 0 25%;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography for headings and paragraphs */
+.about h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+/* Styling for the contact info in the sidebar */
+.about-sidebar .contact-info h3 {
+  margin-bottom: 1rem;
+}
+
+.about-sidebar .contact-info p {
+  margin-bottom: 0.5rem;
+}
+
+/* Resume button styling */
+.about-sidebar .resume-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Responsive adjustments: Stack columns on smaller screens */
+@media (max-width: 768px) {
+  .about-container {
+    flex-wrap: wrap;
+  }
+
+  .about-content,
+  .about-sidebar {
+    flex: 1 1 100%;
+  }
+}

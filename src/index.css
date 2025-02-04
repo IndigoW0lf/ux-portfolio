@@ -1,0 +1,62 @@
+/* index.css - Global Styles and Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define a color palette */
+:root {
+  --primary-color: #f4c7b5;
+  /* Soft accent color */
+  --secondary-color: #7d706c;
+  /* Complementary dark tone */
+  --accent-color: #5a8a73;
+  /* Sage green accent */
+  --text-color: #333;
+  --background-color: #fff;
+}
+
+/* Set global font families */
+body {
+  font-family: 'Comfortaa', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Use a different font for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Comfortaa', sans-serif;
+}
+
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  /* uses my accent color */
+  color: var(--text-color);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  /* rounded edges */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* subtle depth */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #d99982;
+  /* slightly darker variant */
+  transform: translateY(-2px);
+  /* lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}

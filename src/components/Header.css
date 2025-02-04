@@ -1,0 +1,88 @@
+/* Header.css */
+.header {
+  /* Use absolute positioning so the header overlays the hero image */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  /* Sage green with transparency */
+  background-color: rgba(232, 245, 233, 0.8);
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 2rem;
+  /* Optional: remove border radii for a flush overlay look */
+  /* border-bottom-left-radius: 8px;
+     border-bottom-right-radius: 8px; */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Remove any extra top padding so the header doesn’t push content down */
+/* (Be sure that no other CSS is adding top padding to your main content) */
+
+/* Navigation layout */
+.primary-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand container: holds your name and social icons, aligned left */
+.brand-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo text styling (your name) */
+.logo-text {
+  font-family: 'Truculenta', sans-serif;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+/* Header social icons: left aligned and slightly nudged if needed */
+.header .social-icons {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  /* Space between your name and icons */
+}
+
+.header .social-icons a {
+  color: #000;
+  /* Black icons */
+  margin-left: 0.75rem;
+  font-size: 1.2rem;
+  /* Adjusted size */
+  transition: color 0.3s ease;
+  transform: translateY(2px);
+  /* Fine-tune vertical alignment */
+}
+
+.header .social-icons a:hover {
+  color: var(--primary-color);
+}
+
+/* Navigation links styling */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  font-weight: 500;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--primary-color);
+}
+
+/* Responsive adjustments: Stack nav-links on smaller screens */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
