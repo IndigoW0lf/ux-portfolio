@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ux-portfolio/static/css/main.3fc36b24.css",
+    "main.js": "/ux-portfolio/static/js/main.0b406012.js",
+    "static/media/hero-bg.jpeg": "/ux-portfolio/static/media/hero-bg.7dd6220764260ef69266.jpeg",
+    "index.html": "/ux-portfolio/index.html",
+    "main.3fc36b24.css.map": "/ux-portfolio/static/css/main.3fc36b24.css.map",
+    "main.0b406012.js.map": "/ux-portfolio/static/js/main.0b406012.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3fc36b24.css",
+    "static/js/main.0b406012.js"
+  ]
+}
