@@ -11,8 +11,7 @@ import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import JusticeConnect from './components/portfolio/JusticeConnect'; // Import the new project page
-
+import JusticeConnect from './components/portfolio/JusticeConnect';
 import './App.css';
 
 function App() {
