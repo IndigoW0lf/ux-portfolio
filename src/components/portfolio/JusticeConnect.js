@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
-import './ProjectPage.css'; // New CSS file for project pages
+import './ProjectPage.css'; // Ensure this file exists and has styles
 
 const JusticeConnect = () => {
   return (
