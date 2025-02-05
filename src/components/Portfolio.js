@@ -5,10 +5,11 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: 'Project One',
-      description: 'Description of Project One.',
-      image: '/images/project1.jpg',
-      link: '#',
+      title: 'Justice Connect',
+      description:
+        'A digital platform connecting users with local activism, volunteering, and community events focused on justice issues.',
+      image: '/images/justice-connect.jpg',
+      link: '/projects/justice-connect',
     },
     {
       id: 2,
