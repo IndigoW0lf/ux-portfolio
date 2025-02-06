@@ -2,17 +2,15 @@
 import React from 'react';
 import './Header.css';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import useFadeInOnScroll from '../hooks/useFadeInOnScroll';
+import { HashLink } from 'react-router-hash-link';
 
 const Header = () => {
-  useFadeInOnScroll();
-
   return (
-    <header className="header fade-in">
-      <nav className="primary-menu fade-in">
-        <div className="brand-container fade-in">
+    <header className="header">
+      <nav className="primary-menu">
+        <div className="brand-container">
           <span className="logo-text">Kai Indigo Wolf</span>
-          <div className="social-icons fade-in">
+          <div className="social-icons">
             <a
               href="http://www.linkedin.com/in/indigowolf"
               target="_blank"
@@ -29,21 +27,31 @@ const Header = () => {
             </a>
           </div>
         </div>
-        <ul className="nav-links fade-in">
+        <ul className="nav-links">
           <li>
-            <a href="#home">Home</a>
+            <HashLink smooth to="/#home">
+              Home
+            </HashLink>
           </li>
           <li>
-            <a href="#about">About Me</a>
+            <HashLink smooth to="/#about">
+              About Me
+            </HashLink>
           </li>
           <li>
-            <a href="#services">What I Do</a>
+            <HashLink smooth to="/#services">
+              What I Do
+            </HashLink>
           </li>
           <li>
-            <a href="#portfolio">Projects</a>
+            <HashLink smooth to="/#portfolio">
+              Projects
+            </HashLink>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <HashLink smooth to="/#contact">
+              Contact
+            </HashLink>
           </li>
         </ul>
       </nav>
