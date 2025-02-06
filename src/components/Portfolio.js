@@ -1,7 +1,11 @@
+// Portfolio.js
 import React from 'react';
 import './Portfolio.css';
+import { useFadeInOnScroll } from '../hooks/useFadeInOnScroll';
 
 const Portfolio = () => {
+  useFadeInOnScroll();
+
   const projects = [
     {
       id: 1,
@@ -28,12 +32,12 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="portfolio">
-      <div className="container">
-        <h2>Projects</h2>
-        <div className="projects-grid">
+    <section id="portfolio" className="portfolio fade-in">
+      <div className="container fade-in">
+        <h2 className="fade-in">Projects</h2>
+        <div className="projects-grid fade-in">
           {projects.map((project) => (
-            <div key={project.id} className="project-card" data-aos="zoom-in">
+            <div key={project.id} className="project-card fade-in">
               <img src={project.image} alt={project.title} />
               <h3>{project.title}</h3>
               <p>{project.description}</p>
