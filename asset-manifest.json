@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ux-portfolio/static/css/main.6a88f6f9.css",
-    "main.js": "/ux-portfolio/static/js/main.fb36e62b.js",
+    "main.js": "/ux-portfolio/static/js/main.5411dd75.js",
     "static/media/hero-bg.jpeg": "/ux-portfolio/static/media/hero-bg.7dd6220764260ef69266.jpeg",
     "index.html": "/ux-portfolio/index.html",
     "main.6a88f6f9.css.map": "/ux-portfolio/static/css/main.6a88f6f9.css.map",
-    "main.fb36e62b.js.map": "/ux-portfolio/static/js/main.fb36e62b.js.map"
+    "main.5411dd75.js.map": "/ux-portfolio/static/js/main.5411dd75.js.map"
   },
   "entrypoints": [
     "static/css/main.6a88f6f9.css",
-    "static/js/main.fb36e62b.js"
+    "static/js/main.5411dd75.js"
   ]
 }
