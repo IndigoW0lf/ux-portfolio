@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+section[id] {
+  scroll-margin-top: 50px;
+  /* my header height */
+}
+
 /* Define a color palette */
 :root {
   /* Same brand colors but adjusted the text color to be darker */

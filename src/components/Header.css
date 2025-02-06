@@ -20,7 +20,7 @@
 }
 
 /* Remove any extra top padding so the header doesn’t push content down */
-/* (Be sure no other CSS is adding top padding to my main content) */
+/* Be sure no other CSS is adding top padding to my main content */
 
 /* Navigation layout */
 .primary-menu {
