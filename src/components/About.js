@@ -1,7 +1,7 @@
 // About.js
 import React from 'react';
 import './About.css';
-import { useFadeInOnScroll } from '../hooks/useFadeInOnScroll';
+import useFadeInOnScroll from '../hooks/useFadeInOnScroll';
 
 const About = () => {
   // Initialize the Intersection Observer from custom hook

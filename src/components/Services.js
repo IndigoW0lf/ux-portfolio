@@ -1,7 +1,7 @@
 // Services.js
 import React from 'react';
 import './Services.css';
-import { useFadeInOnScroll } from '../hooks/useFadeInOnScroll';
+import useFadeInOnScroll from '../hooks/useFadeInOnScroll';
 
 const Services = () => {
   useFadeInOnScroll();

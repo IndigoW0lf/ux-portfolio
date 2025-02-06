@@ -1,4 +1,4 @@
-// FadeInOnScroll.js
+// useFadeInOnScroll.js
 import { useEffect } from 'react';
 
 export default function useFadeInOnScroll() {

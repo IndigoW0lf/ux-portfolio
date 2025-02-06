@@ -2,7 +2,7 @@
 import React from 'react';
 import './Footer.css';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { useFadeInOnScroll } from '../hooks/useFadeInOnScroll';
+import useFadeInOnScroll from '../hooks/useFadeInOnScroll';
 
 const Footer = () => {
   useFadeInOnScroll();

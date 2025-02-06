@@ -1,7 +1,7 @@
 // Hero.js
 import React from 'react';
 import './Hero.css';
-import { useFadeInOnScroll } from '../hooks/useFadeInOnScroll';
+import useFadeInOnScroll from '../hooks/useFadeInOnScroll';
 
 const Hero = () => {
   useFadeInOnScroll();

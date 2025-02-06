@@ -1,7 +1,7 @@
 // Portfolio.js
 import React from 'react';
 import './Portfolio.css';
-import { useFadeInOnScroll } from '../hooks/useFadeInOnScroll';
+import useFadeInOnScroll from '../hooks/useFadeInOnScroll';
 
 const Portfolio = () => {
   useFadeInOnScroll();

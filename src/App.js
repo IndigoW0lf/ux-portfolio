@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+// App.js
+import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -14,9 +13,6 @@ import JusticeConnect from './components/portfolio/JusticeConnect';
 import './App.css';
 
 function App() {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
 
   return (
     <Router>
