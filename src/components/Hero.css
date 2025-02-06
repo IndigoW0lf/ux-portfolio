@@ -1,6 +1,6 @@
 /* Hero.css */
 .hero {
-  height: 90vh;
+  height: 100vh;
   background: url('/public/images/hero-bg.jpeg') no-repeat center center/cover;
   display: flex;
   align-items: center;
