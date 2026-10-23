@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ux-portfolio/static/css/main.566ffc24.css",
-    "main.js": "/ux-portfolio/static/js/main.f1385c93.js",
+    "main.css": "/ux-portfolio/static/css/main.281d66fe.css",
+    "main.js": "/ux-portfolio/static/js/main.7b500502.js",
     "static/media/illustrated-quest.webp": "/ux-portfolio/static/media/illustrated-quest.533289efee24c673594b.webp",
     "static/media/homepage.webp": "/ux-portfolio/static/media/homepage.d1a5a2ff720a5af4a3a7.webp",
     "static/media/shop.webp": "/ux-portfolio/static/media/shop.947178a3069d50f04faa.webp",
@@ -20,10 +20,16 @@
     "static/media/dm-sans-latin-500-normal.woff2": "/ux-portfolio/static/media/dm-sans-latin-500-normal.95be878c7de25e1db4c0.woff2",
     "static/media/dm-sans-latin-400-normal.woff2": "/ux-portfolio/static/media/dm-sans-latin-400-normal.97def203da337e26d827.woff2",
     "static/media/dm-sans-latin-600-normal.woff2": "/ux-portfolio/static/media/dm-sans-latin-600-normal.734311c3c530f3ad138e.woff2",
+    "static/media/trello-automation.svg": "/ux-portfolio/static/media/trello-automation.bdbb4be2aedde1b142de8865e87178fd.svg",
+    "static/media/boho-journal.svg": "/ux-portfolio/static/media/boho-journal.76cb9e006134f87b6266148b54b35398.svg",
+    "static/media/lunara-publishing.svg": "/ux-portfolio/static/media/lunara-publishing.2e6c517ba48ca299aa612a0549416a3b.svg",
+    "static/media/secondbrain.svg": "/ux-portfolio/static/media/secondbrain.57b224f9303ff60a3451d447947dd9be.svg",
+    "static/media/nest-quest.svg": "/ux-portfolio/static/media/nest-quest.1e17c962e02fbbafd8b162e5afa5ae5f.svg",
+    "static/media/cozy-garden.svg": "/ux-portfolio/static/media/cozy-garden.30218f9f0baf5ad21e8653a6d8a2b3e5.svg",
     "index.html": "/ux-portfolio/index.html"
   },
   "entrypoints": [
-    "static/css/main.566ffc24.css",
-    "static/js/main.f1385c93.js"
+    "static/css/main.281d66fe.css",
+    "static/js/main.7b500502.js"
   ]
 }
