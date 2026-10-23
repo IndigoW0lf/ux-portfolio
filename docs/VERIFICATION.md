@@ -69,3 +69,9 @@ Publishing remains a separate GitHub Pages step after merge; creating this PR do
 ## Light voice pass — 2026-10-23
 
 Copy-only changes preserve layout, technical mechanisms, links, and project scope. Production build and all five Jest tests pass. Full-site and secondary-case-study browser checks pass again, including responsive widths down to 320 px, without runtime or HTTP errors.
+
+## Personal hero and resume — 2026-10-23
+
+Production build and six Jest tests pass, including selected-question/project navigation. Browser verification checks all three notes, exclusive pressed state, Space activation, project destinations, PDF response bytes and content type, and contact links. Hero checked at 1440, 1024, 768, 700, 390, and 320 px with no horizontal overflow. Full-site checks pass for eighteen routes, filters, publication demo, refresh, unknown routes, and skip link. No runtime or HTTP errors. Reduced-motion styling disables note transitions.
+
+The one-page PDF was text-extracted, checked for expected names/contact information, rendered with Poppler, and visually inspected. A public live-site check follows deployment.
