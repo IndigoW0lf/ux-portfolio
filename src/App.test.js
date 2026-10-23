@@ -134,25 +134,36 @@ test("research figures are labeled as figures and retain a report source", () =>
   ).toHaveAttribute("target", "_blank");
 });
 
-test("field notes keep the selected question and destination together", () => {
+test("field notes preview on hover or focus and link directly to their projects", () => {
   render(<App />);
   const notes = screen.getByRole("complementary", {
     name: "A few threads from my work",
   });
-  fireEvent.click(
-    within(notes).getByRole("button", { name: /why did the answer change/i }),
-  );
+  const question = within(notes).getByRole("link", {
+    name: /why did the answer change/i,
+  });
+  fireEvent.mouseEnter(question);
+  expect(question).toHaveAttribute("href", "#/projects/agent-behavior-lab");
   expect(
-    within(notes).getByRole("link", { name: /Agent Behavior Lab/ }),
-  ).toHaveAttribute("href", "#/projects/agent-behavior-lab");
-  expect(
-    within(notes).getByRole("button", {
-      name: /Could this feel more like an adventure/i,
+    within(notes).getByRole("link", {
+      name: "Agent Behavior Lab",
+      exact: true,
     }),
-  ).toHaveAttribute("aria-pressed", "false");
-  fireEvent.click(
-    within(notes).getByRole("link", { name: /Agent Behavior Lab/ }),
-  );
+  ).toHaveAttribute("href", "#/projects/agent-behavior-lab");
+  const learning = within(notes).getByRole("link", {
+    name: /Could this feel more like an adventure/i,
+  });
+  fireEvent.focus(learning);
+  expect(learning).toHaveAttribute("href", "#/projects/lunara-quest");
+  expect(
+    within(notes).getByRole("link", { name: "Lunara Quest", exact: true }),
+  ).toHaveAttribute("href", "#/projects/lunara-quest");
+  expect(
+    within(notes).getByRole("link", {
+      name: /Can I make this a little easier/i,
+    }),
+  ).toHaveAttribute("href", "#/projects/the-lunara-edit");
+  fireEvent.click(question);
   expect(
     screen.getByRole("heading", { level: 1, name: "Agent Behavior Lab" }),
   ).toBeInTheDocument();
