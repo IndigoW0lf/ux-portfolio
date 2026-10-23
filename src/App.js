@@ -1,52 +1,76 @@
-// App.js
-import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect, useRef } from "react";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
+import SiteHeader from "./components/SiteHeader";
+import HomePage from "./components/HomePage";
+import ProjectPage from "./components/ProjectPage";
+import { projects } from "./data/projects";
+import "./App.css";
 
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import JusticeConnect from './components/portfolio/JusticeConnect';
-
-import './App.css';
-
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        {/* Header always visible */}
-        <Header />
-
-        {/* Define all routes */}
-        <Routes>
-          {/* Main/Root route = Single-page layout */}
-          <Route
-            path="/"
-            element={
-              <>
-                <Hero />
-                <About />
-                <Services />
-                <Portfolio />
-                <Contact />
-              </>
-            }
-          />
-          {/* Portfolio Project Route */}
-          <Route
-            path="/projects/justice-connect"
-            element={<JusticeConnect />}
-          />
-        </Routes>
-
-        {/* Footer always visible */}
-        <Footer />
-      </div>
-    </Router>
-  );
+function RouteEffects() {
+  const { pathname, hash } = useLocation();
+  const previousPath = useRef(null);
+  useEffect(() => {
+    const project = projects.find((p) => pathname === `/projects/${p.slug}`);
+    document.title = project
+      ? `${project.title} | Kai Indigo Wolf`
+      : "Kai Indigo Wolf | Software Engineer";
+    if (hash) {
+      document.getElementById(hash.slice(1))?.scrollIntoView();
+    } else {
+      window.scrollTo(0, 0);
+      if (previousPath.current !== null && previousPath.current !== pathname) {
+        document.getElementById("main-content")?.focus({ preventScroll: true });
+      }
+    }
+    previousPath.current = pathname;
+  }, [pathname, hash]);
+  return null;
 }
 
-export default App;
+export default function App() {
+  return (
+    <HashRouter>
+      <RouteEffects />
+      <a
+        className="skip-link"
+        href="#main-content"
+        onClick={(event) => {
+          event.preventDefault();
+          document.getElementById("main-content")?.focus();
+        }}
+      >
+        Skip to content
+      </a>
+      <SiteHeader />
+      <main id="main-content" tabIndex={-1}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects/:slug" element={<ProjectPage />} />
+          <Route path="*" element={<ProjectPage />} />
+        </Routes>
+      </main>
+      <footer className="site-footer">
+        <div className="shell footer-inner">
+          <span>© {new Date().getFullYear()} Kai Indigo Wolf</span>
+          <span>Built with React. Always a work in progress.</span>
+          <div>
+            <a
+              href="https://github.com/IndigoW0lf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub ↗
+            </a>
+            <a
+              href="https://www.linkedin.com/in/indigowolf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn ↗
+            </a>
+          </div>
+        </div>
+      </footer>
+    </HashRouter>
+  );
+}
