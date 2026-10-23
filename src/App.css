@@ -1903,3 +1903,46 @@
   font-size: 11px;
   color: var(--violet);
 }
+
+/* Source-grounded system illustrations keep secondary case studies visual. */
+.system-illustration {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.system-illustration > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.system-illustration figcaption {
+  padding: 20px 28px;
+  display: flex;
+  align-items: baseline;
+  gap: 14px 24px;
+  flex-wrap: wrap;
+}
+.system-illustration figcaption p {
+  flex: 1 1 280px;
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+.system-illustration figcaption .eyebrow {
+  margin: 0;
+}
+.case-next-step {
+  margin-top: 28px;
+  padding-left: 20px;
+  border-left: 2px solid var(--sage);
+}
+.case-next-step .eyebrow {
+  font-size: 9px;
+  margin-bottom: 10px;
+}
+@media (max-width: 600px) {
+  .system-illustration figcaption {
+    padding: 18px;
+  }
+}
