@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/ux-portfolio/static/css/main.d907a420.css",
-    "main.js": "/ux-portfolio/static/js/main.19bab71a.js",
+    "main.css": "/ux-portfolio/static/css/main.df163de4.css",
+    "main.js": "/ux-portfolio/static/js/main.60a140b2.js",
     "static/media/illustrated-quest.webp": "/ux-portfolio/static/media/illustrated-quest.533289efee24c673594b.webp",
     "static/media/homepage.webp": "/ux-portfolio/static/media/homepage.d1a5a2ff720a5af4a3a7.webp",
     "static/media/shop.webp": "/ux-portfolio/static/media/shop.947178a3069d50f04faa.webp",
     "static/media/reading-overview.webp": "/ux-portfolio/static/media/reading-overview.0579cb517b17f7c6ebef.webp",
     "static/media/quick-read.webp": "/ux-portfolio/static/media/quick-read.b6ddf6eb9f20180cf880.webp",
     "static/media/illustrated-quest-card.webp": "/ux-portfolio/static/media/illustrated-quest-card.8921245ece12dbeef819.webp",
+    "static/media/luna-moth-watercolor.webp": "/ux-portfolio/static/media/luna-moth-watercolor.d089216753b65d14fc84.webp",
     "static/media/archive.webp": "/ux-portfolio/static/media/archive.71a3d78f39b7df537f36.webp",
     "static/media/homepage-card.webp": "/ux-portfolio/static/media/homepage-card.b16932682336c7952c66.webp",
     "static/media/confirmatory-accuracy.webp": "/ux-portfolio/static/media/confirmatory-accuracy.42a451f43080fb0b9d03.webp",
@@ -29,7 +30,7 @@
     "index.html": "/ux-portfolio/index.html"
   },
   "entrypoints": [
-    "static/css/main.d907a420.css",
-    "static/js/main.19bab71a.js"
+    "static/css/main.df163de4.css",
+    "static/js/main.60a140b2.js"
   ]
 }
