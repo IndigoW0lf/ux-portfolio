@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ux-portfolio/static/css/main.beffaac7.css",
-    "main.js": "/ux-portfolio/static/js/main.94525f66.js",
+    "main.css": "/ux-portfolio/static/css/main.a6b3d648.css",
+    "main.js": "/ux-portfolio/static/js/main.c396dfeb.js",
     "static/media/illustrated-quest.webp": "/ux-portfolio/static/media/illustrated-quest.533289efee24c673594b.webp",
     "static/media/homepage.webp": "/ux-portfolio/static/media/homepage.d1a5a2ff720a5af4a3a7.webp",
     "static/media/shop.webp": "/ux-portfolio/static/media/shop.947178a3069d50f04faa.webp",
@@ -30,7 +30,7 @@
     "index.html": "/ux-portfolio/index.html"
   },
   "entrypoints": [
-    "static/css/main.beffaac7.css",
-    "static/js/main.94525f66.js"
+    "static/css/main.a6b3d648.css",
+    "static/js/main.c396dfeb.js"
   ]
 }
