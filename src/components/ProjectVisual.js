@@ -1,7 +1,21 @@
 import React from "react";
 
-// These are architecture illustrations, not screenshots of private customer data.
+// Use provided product captures when available; otherwise show a labeled illustration.
 export default function ProjectVisual({ project, compact = false }) {
+  if (project.cover) {
+    return (
+      <div className="project-visual screenshot-card" aria-hidden="true">
+        <img
+          src={project.cover.src}
+          alt=""
+          width={project.cover.width}
+          height={project.cover.height}
+          loading="lazy"
+        />
+        <span className="screenshot-card-label">Product screenshot</span>
+      </div>
+    );
+  }
   return (
     <div
       className={`project-visual visual-${project.visual} ${compact ? "visual-compact" : ""}`}

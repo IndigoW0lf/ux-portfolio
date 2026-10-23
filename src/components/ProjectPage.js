@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Link as HashLink } from "react-router-dom";
 import { projects } from "../data/projects";
 import ProjectVisual from "./ProjectVisual";
+import ProjectGallery from "./ProjectGallery";
 
 export default function ProjectPage() {
   const { slug } = useParams();
@@ -57,7 +58,11 @@ export default function ProjectPage() {
             )}
           </div>
         </header>
-        <ProjectVisual project={project} />
+        {project.screenshots ? (
+          <ProjectGallery key={project.slug} project={project} />
+        ) : (
+          <ProjectVisual project={project} />
+        )}
         <div className="case-layout">
           <aside className="case-sidebar">
             <div>

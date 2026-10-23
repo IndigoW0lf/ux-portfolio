@@ -1,3 +1,11 @@
+import editHomepage from "../assets/projects/the-lunara-edit/homepage.webp";
+import editHomepageCard from "../assets/projects/the-lunara-edit/homepage-card.webp";
+import editShop from "../assets/projects/the-lunara-edit/shop.webp";
+import worldOverview from "../assets/projects/the-world-clearly/reading-overview.webp";
+import worldOverviewCard from "../assets/projects/the-world-clearly/reading-overview-card.webp";
+import worldQuickRead from "../assets/projects/the-world-clearly/quick-read.webp";
+import worldArchive from "../assets/projects/the-world-clearly/archive.webp";
+
 const repo = (name) => `https://github.com/IndigoW0lf/${name}`;
 
 // Public portfolio copy. Evidence and private source references belong in docs/CONTENT_SOURCES.md.
@@ -53,6 +61,27 @@ export const projects = [
     status: "Live",
     featured: true,
     visual: "edit",
+    cover: { src: editHomepageCard, width: 960, height: 534 },
+    screenshots: [
+      {
+        src: editHomepage,
+        width: 2048,
+        height: 1140,
+        label: "Editorial homepage",
+        alt: "The Lunara Edit homepage with a workspace photograph, editorial introduction, and navigation to learning and home resources.",
+        caption:
+          "The entry point brings editorial content, learning resources, and practical home tools into one navigation system. Shared site components keep that experience consistent across sections.",
+      },
+      {
+        src: editShop,
+        width: 2048,
+        height: 1143,
+        label: "Searchable resource catalog",
+        alt: "The Lunara Edit shop with a search field, audience, age, subject, price, and sort controls above printable resource cards.",
+        caption:
+          "Search and multiple filters help visitors narrow a mixed resource catalog. Product cards bring preview artwork, pricing, audience guidance, and checkout links together.",
+      },
+    ],
     summary:
       "The editorial and storefront system behind my independent learning-resource business.",
     stack: ["Next.js", "React", "TypeScript", "PostHog", "Playwright"],
@@ -96,6 +125,36 @@ export const projects = [
     status: "Live · iterating",
     featured: true,
     visual: "world",
+    cover: { src: worldOverviewCard, width: 960, height: 534 },
+    screenshots: [
+      {
+        src: worldOverview,
+        width: 2048,
+        height: 1140,
+        label: "One story, four reading modes",
+        alt: "The World, Clearly overview showing First Look, Quick Read, Full Story, and Deep Dive choices alongside a vocabulary sidebar.",
+        caption:
+          "The overview offers four routes into the same story, with reading-time estimates and nearby vocabulary support. Readers choose the amount of explanation and context they want.",
+      },
+      {
+        src: worldQuickRead,
+        width: 2046,
+        height: 1884,
+        label: "Inside Quick Read",
+        alt: "A Quick Read article with the active reading mode highlighted, source and verification metadata, vocabulary definitions, and a reflection question.",
+        caption:
+          "The article keeps mode switching available beside source and verification metadata. Vocabulary definitions and a reflection prompt support understanding within the reading experience.",
+      },
+      {
+        src: worldArchive,
+        width: 1896,
+        height: 1924,
+        label: "Topic-based story archive",
+        alt: "The World, Clearly archive with topic navigation and story summaries that include reading times and source counts.",
+        caption:
+          "The archive makes earlier coverage discoverable by subject. Consistent story summaries, reading-time labels, and source counts give readers context before opening an article.",
+      },
+    ],
     summary:
       "Current events for young readers, with four reading modes and an integrated editorial newsroom.",
     stack: [

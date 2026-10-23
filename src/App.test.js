@@ -1,6 +1,8 @@
 import React from "react";
 import { fireEvent, render, screen, within } from "@testing-library/react";
 import App from "./App";
+import { MemoryRouter, Routes, Route } from "react-router-dom";
+import ProjectPage from "./components/ProjectPage";
 import { projects } from "./data/projects";
 
 beforeEach(() => {
@@ -62,4 +64,37 @@ test("every project has a unique route, complete overview, and no placeholder li
       expect(new URL(url).protocol).toBe("https:");
     }
   }
+});
+
+test("screenshot selection updates the image and resets when opening another project", () => {
+  render(
+    <MemoryRouter initialEntries={["/projects/the-lunara-edit"]}>
+      <Routes>
+        <Route path="/projects/:slug" element={<ProjectPage />} />
+      </Routes>
+    </MemoryRouter>,
+  );
+  fireEvent.click(
+    screen.getByRole("button", { name: /Searchable resource catalog/ }),
+  );
+  expect(screen.getByRole("img")).toHaveAttribute(
+    "alt",
+    expect.stringContaining("shop with a search field"),
+  );
+  expect(
+    screen.getByRole("button", { name: /Searchable resource catalog/ }),
+  ).toHaveAttribute("aria-pressed", "true");
+  expect(
+    screen.getByRole("link", {
+      name: /Open full-size Searchable resource catalog screenshot/,
+    }),
+  ).toHaveAttribute("target", "_blank");
+  fireEvent.click(screen.getByRole("link", { name: /The World, Clearly/ }));
+  expect(
+    screen.getByRole("button", { name: /One story, four reading modes/ }),
+  ).toHaveAttribute("aria-pressed", "true");
+  expect(screen.getByRole("img")).toHaveAttribute(
+    "alt",
+    expect.stringContaining("overview showing First Look"),
+  );
 });

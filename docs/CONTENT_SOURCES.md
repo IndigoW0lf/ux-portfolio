@@ -36,7 +36,7 @@ README-backed descriptions are not independent audits of those products. This re
 ## Important presentation choices
 
 - No child names, family account records, learner photos, private dashboards, or personal financial records.
-- System illustrations and editorial concepts are labeled. They are not screenshots or interactive versions of the underlying products.
+- The Lunara Edit and The World, Clearly use screenshots supplied by Kai on 2026-10-23. Full-size assets preserve the original pixels using lossless WebP; smaller card thumbnails are resized separately. Other projects retain labeled illustrations. Captures demonstrate interface presentation, not a live embedded product.
 - The small publication demo uses illustrative records, explicitly distinguished from the live catalog.
 - No fabricated conversion rates, user counts, revenue, performance improvements, or accessibility certifications.
 - No blanket legal/security-compliance claims. Access-control descriptions explain the reviewed mechanism rather than declaring the whole application secure.
@@ -47,8 +47,20 @@ README-backed descriptions are not independent audits of those products. This re
 
 ## Next editorial improvements
 
-1. Add public-safe product screenshots or a synthetic demo account after selecting representative screens. Live screenshot access was unavailable during this session.
+1. Add public-safe Lunara Quest and Agent Behavior Lab captures when available. The Lunara Edit homepage/catalog and The World, Clearly overview/reader/archive screenshots have been supplied and integrated.
 2. Add a Pantheon case study with Kai's exact contribution, approved public details, tradeoffs, and verifiable outcomes. Potential subjects include the notifications hackathon, routing/authentication work, and observability; this refresh does not invent those details.
 3. Expand the most important case studies with a concrete bug, tradeoff, or failed approach in Kai's own words.
 4. Reassess older prototypes as their external APIs and dependencies change.
 5. Review the public-facing prose and confirm the preferred career emphasis before merging/deploying.
+
+## Screenshot additions — 2026-10-23
+
+| Supplied capture | Portfolio use                                                                                         |
+| ---------------- | ----------------------------------------------------------------------------------------------------- |
+| 10.47.30 AM      | The Lunara Edit editorial homepage; first gallery image and featured-card cover                       |
+| 10.48.00 AM      | The Lunara Edit searchable resource catalog                                                           |
+| 10.48.17 AM      | The World, Clearly story overview and four reading modes; first gallery image and featured-card cover |
+| 10.48.47 AM      | Quick Read article, vocabulary sidebar, source metadata, and reflection prompt                        |
+| 10.49.10 AM      | Topic-based archive and consistent story summaries                                                    |
+
+Original uploaded PNGs are unchanged. Captions describe visible interface features without treating screenshot text as an independently verified factual source. No learner data, private dashboards, or browser credentials appear in these captures.

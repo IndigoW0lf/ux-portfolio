@@ -32,3 +32,15 @@ Desktop and mobile layouts were visually inspected. Screenshots in this folder s
 - No family accounts, private dashboards, or live customer records were opened.
 - Existing Create React App tooling emits non-blocking Browserslist and Node deprecation notices. A build-tool migration is outside this refresh.
 - Keyboard and responsive checks do not constitute a complete assistive-technology or WCAG audit.
+
+## Screenshot gallery follow-up — 2026-10-23
+
+The Lunara Edit and The World, Clearly now use five supplied product captures. Other projects retain their labeled illustrations.
+
+- Four Jest tests pass, including gallery selection, full-size link behavior, and selection reset when navigating between projects.
+- The production build passes with GitHub Pages asset paths preserved.
+- Chromium confirmed that all five gallery images and both card covers load. Gallery selectors, keyboard activation, full-size asset links, and selection reset passed.
+- Home/card previews and both galleries were visually inspected. No horizontal document overflow occurred at 1440, 768, 390, or 320 px while selecting any gallery image.
+- No page runtime or HTTP errors occurred in the screenshot checks.
+- All five full-size WebP files were compared against the supplied PNGs and match their decoded RGB pixels exactly. Smaller card covers are separate resized assets.
+- Original uploads remain unchanged. No messages, production deployments, or edits to the underlying product sites were performed.
