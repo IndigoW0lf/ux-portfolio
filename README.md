@@ -42,3 +42,7 @@ The existing `homepage` remains `https://indigow0lf.github.io/ux-portfolio`. A p
 `npm run deploy` publishes the build to the `gh-pages` branch. Run it only when the reviewed version is ready to become public. This branch does not publish a deployment automatically.
 
 For a root-domain host, update `homepage` before building. The source project and current hosting URL retain the old repository name so existing addresses continue working.
+
+## Research figures
+
+Agent Behavior Lab has a CLI workflow rather than an application UI. Its portfolio images are research figures, labeled separately from product screenshots, with a link to the published confirmatory report. Rebuild them with `python scripts/render_lab_figures.py` in a Python environment containing matplotlib and Pillow. The script uses the reviewed JSON summary; it does not run evaluations or call model APIs.

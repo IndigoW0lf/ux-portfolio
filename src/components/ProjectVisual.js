@@ -4,7 +4,10 @@ import React from "react";
 export default function ProjectVisual({ project, compact = false }) {
   if (project.cover) {
     return (
-      <div className="project-visual screenshot-card" aria-hidden="true">
+      <div
+        className={`project-visual screenshot-card ${project.galleryType === "research" ? "research-card" : ""}`}
+        aria-hidden="true"
+      >
         <img
           src={project.cover.src}
           alt=""
@@ -12,7 +15,11 @@ export default function ProjectVisual({ project, compact = false }) {
           height={project.cover.height}
           loading="lazy"
         />
-        <span className="screenshot-card-label">Product screenshot</span>
+        <span className="screenshot-card-label">
+          {project.galleryType === "research"
+            ? "Research figure"
+            : "Product screenshot"}
+        </span>
       </div>
     );
   }

@@ -98,3 +98,38 @@ test("screenshot selection updates the image and resets when opening another pro
     expect.stringContaining("overview showing First Look"),
   );
 });
+
+test("research figures are labeled as figures and retain a report source", () => {
+  render(
+    <MemoryRouter initialEntries={["/projects/agent-behavior-lab"]}>
+      <Routes>
+        <Route path="/projects/:slug" element={<ProjectPage />} />
+      </Routes>
+    </MemoryRouter>,
+  );
+  expect(
+    screen.getByRole("group", { name: "Choose a figure" }),
+  ).toBeInTheDocument();
+  expect(screen.getByRole("img")).toHaveAttribute(
+    "alt",
+    expect.stringContaining("43 of 48"),
+  );
+  fireEvent.click(
+    screen.getByRole("button", { name: /Paired answer changes/ }),
+  );
+  expect(screen.getByRole("img")).toHaveAttribute(
+    "alt",
+    expect.stringContaining("20 correct-to-wrong"),
+  );
+  expect(
+    screen.getByRole("link", { name: /Source: published confirmatory report/ }),
+  ).toHaveAttribute(
+    "href",
+    "https://github.com/IndigoW0lf/agent-behavior-lab/blob/main/results/study-001-confirmatory.md",
+  );
+  expect(
+    screen.getByRole("link", {
+      name: /Open full-size Paired answer changes figure/,
+    }),
+  ).toHaveAttribute("target", "_blank");
+});

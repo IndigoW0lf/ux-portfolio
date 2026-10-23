@@ -1,3 +1,8 @@
+import questLesson from "../assets/projects/lunara-quest/illustrated-quest.webp";
+import questLessonCard from "../assets/projects/lunara-quest/illustrated-quest-card.webp";
+import labAccuracy from "../assets/projects/agent-behavior-lab/confirmatory-accuracy.webp";
+import labAccuracyCard from "../assets/projects/agent-behavior-lab/confirmatory-accuracy-card.webp";
+import labChanges from "../assets/projects/agent-behavior-lab/paired-answer-changes.webp";
 import editHomepage from "../assets/projects/the-lunara-edit/homepage.webp";
 import editHomepageCard from "../assets/projects/the-lunara-edit/homepage-card.webp";
 import editShop from "../assets/projects/the-lunara-edit/shop.webp";
@@ -19,6 +24,18 @@ export const projects = [
     status: "Active development",
     featured: true,
     visual: "quest",
+    cover: { src: questLessonCard, width: 960, height: 647 },
+    screenshots: [
+      {
+        src: questLesson,
+        width: 2048,
+        height: 1381,
+        label: "Inside an illustrated quest",
+        alt: "Lunara Quest lesson showing a multiple-choice prompt, an illustrated friendship investigation, and follow-up evidence questions.",
+        caption:
+          "An authored quest combines an interactive choice, explanatory artwork, and follow-up questions inside the learning platform. This curriculum preview shows the lesson experience without exposing learner profiles or responses.",
+      },
+    ],
     summary:
       "A homeschool platform that connects parent planning with independent, quest-based learning.",
     stack: ["Next.js", "TypeScript", "Supabase", "OpenAI", "Upstash", "Vitest"],
@@ -50,7 +67,7 @@ export const projects = [
     outcome:
       "An actively used family learning tool, with separate parent and learner portals, printable worksheet support, and a growing authored curriculum. Continuing work includes lesson QA and clearer independent-learning instructions.",
     limits:
-      "Family accounts and learner screens are private. This case study describes the architecture without exposing learner records.",
+      "Family accounts and learner records remain private. The public capture shows an authored lesson; profile, activity, and journal screenshots are excluded.",
   },
   {
     slug: "the-lunara-edit",
@@ -205,6 +222,32 @@ export const projects = [
     status: "Research in progress",
     featured: true,
     visual: "lab",
+    galleryType: "research",
+    galleryHeading: "EVIDENCE FROM THE EXPERIMENT",
+    galleryDateLabel: "Confirmatory run · September 16, 2026",
+    mediaSource:
+      "https://github.com/IndigoW0lf/agent-behavior-lab/blob/main/results/study-001-confirmatory.md",
+    cover: { src: labAccuracyCard, width: 960, height: 600 },
+    screenshots: [
+      {
+        src: labAccuracy,
+        width: 2160,
+        height: 1350,
+        label: "Confirmatory accuracy",
+        alt: "Accuracy across 48 held-out items: baseline 43 of 48, 89.6 percent; repetition control 29 of 48, 60.4 percent; named peers 10 of 48, 20.8 percent.",
+        caption:
+          "The primary comparison is named peers versus repetition, a decrease of 39.6 percentage points. Baseline is a descriptive reference. This figure is generated from the published confirmatory report, not a screenshot of a graphical application.",
+      },
+      {
+        src: labChanges,
+        width: 2160,
+        height: 1350,
+        label: "Paired answer changes",
+        alt: "Paired answers under repetition versus named peers: 9 correct in both, 20 correct-to-wrong, 1 wrong-to-correct, and 18 wrong in both; total 48 items.",
+        caption:
+          "The paired view follows the same questions across both conditions: 20 changed from correct to wrong, while one changed from wrong to correct. Exact McNemar p = 0.0000209808. The result is specific to this model, prompt format, and task family.",
+      },
+    ],
     summary:
       "Reproducible experiments testing how attributed peer answers affect model behavior.",
     stack: ["Python", "Inspect AI", "pytest", "Ruff", "Paired analysis"],

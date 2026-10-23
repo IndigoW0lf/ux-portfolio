@@ -1895,3 +1895,11 @@
     max-height: 450px;
   }
 }
+.research-card img {
+  object-fit: contain;
+  background: var(--paper);
+}
+.gallery-source a {
+  font-size: 11px;
+  color: var(--violet);
+}

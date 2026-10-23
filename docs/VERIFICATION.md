@@ -44,3 +44,11 @@ The Lunara Edit and The World, Clearly now use five supplied product captures. O
 - No page runtime or HTTP errors occurred in the screenshot checks.
 - All five full-size WebP files were compared against the supplied PNGs and match their decoded RGB pixels exactly. Smaller card covers are separate resized assets.
 - Original uploads remain unchanged. No messages, production deployments, or edits to the underlying product sites were performed.
+
+## Quest and research-media follow-up — 2026-10-23
+
+- Five Jest tests pass, including research labeling, source-link preservation, gallery selection, and cross-project reset.
+- Production build passes. Chromium checks load all eight product/research gallery images and four card covers, test keyboard selection and full-size links, and check all four galleries at 1440/768/390/320 px without horizontal overflow or page/HTTP errors.
+- The Quest gallery uses only the 1.08.26 PM illustrated lesson capture. The other five supplied Quest captures are not copied to the public repository because they show family profiles, learner activity, or journal content.
+- The two research figures were visually inspected and generated from the published confirmatory summary. Script assertions verify the paired counts total 48 and agree with the repetition and peer accuracy totals. The JSON source snapshot records the retrieved report blob SHA.
+- Figure generation makes no model/API calls and does not modify the Agent Behavior Lab project or its raw logs.
