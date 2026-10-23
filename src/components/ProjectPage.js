@@ -60,6 +60,27 @@ export default function ProjectPage() {
         </header>
         {project.screenshots ? (
           <ProjectGallery key={project.slug} project={project} />
+        ) : project.illustration ? (
+          <figure className="system-illustration">
+            <img
+              src={project.illustration.src}
+              alt={project.illustration.alt}
+              width={project.illustration.width}
+              height={project.illustration.height}
+            />
+            <figcaption>
+              <span className="eyebrow">IMPLEMENTATION SKETCH</span>
+              <p>{project.illustration.caption}</p>
+              <a
+                className="text-link"
+                href={project.illustration.src}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open full-size illustration ↗
+              </a>
+            </figcaption>
+          </figure>
         ) : (
           <ProjectVisual project={project} />
         )}
@@ -88,7 +109,7 @@ export default function ProjectPage() {
               </HashLink>
               {project.decisions ? (
                 <HashLink to={`/projects/${slug}#decisions`}>
-                  Engineering decisions
+                  {project.decisionsTitle || "Engineering decisions"}
                 </HashLink>
               ) : null}
               <HashLink to={`/projects/${slug}#status`}>
@@ -127,7 +148,12 @@ export default function ProjectPage() {
             </section>
             {project.decisions ? (
               <section id="decisions">
-                <p className="eyebrow">03 / ENGINEERING DECISIONS</p>
+                <p className="eyebrow">
+                  03 /{" "}
+                  {(
+                    project.decisionsTitle || "Engineering decisions"
+                  ).toUpperCase()}
+                </p>
                 <h2>Choices behind the experience.</h2>
                 <div className="decisions">
                   {project.decisions.map(([title, text]) => (
@@ -143,6 +169,17 @@ export default function ProjectPage() {
               <p className="eyebrow">CURRENT STATE</p>
               <h2>Where it stands.</h2>
               <p>{project.outcome}</p>
+              {project.nextStep ? (
+                <div className="case-next-step">
+                  <p className="eyebrow">
+                    {project.status === "Earlier iteration" ||
+                    project.slug === "homeschool-haven"
+                      ? "PROJECT DIRECTION"
+                      : "NEXT STEP"}
+                  </p>
+                  <p>{project.nextStep}</p>
+                </div>
+              ) : null}
               {project.limits ? (
                 <div className="case-note">
                   <strong>Scope & limitations</strong>

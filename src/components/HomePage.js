@@ -22,8 +22,8 @@ export default function HomePage() {
           </h1>
           <p className="hero-description">
             I’m Kai. I build web applications and tools that make complicated
-            things easier to work with—from family learning to publishing, data,
-            and AI.
+            things a little easier to work with, from family learning and
+            publishing to the data and AI questions I’m curious about.
           </p>
           <div className="hero-actions">
             <HashLink className="button primary" to="/#work">
@@ -229,8 +229,8 @@ export default function HomePage() {
           <div className="about-copy">
             <p className="lead">
               I’m a software engineer at Pantheon and the founder of Lunara LLC.
-              My work moves between production frontend engineering and
-              independently built products.
+              Alongside my frontend work, I build products around the questions
+              and everyday problems that keep catching my attention.
             </p>
             <p>
               My UX background still shapes how I work. I care about readable
@@ -270,9 +270,9 @@ export default function HomePage() {
               </article>
             </div>
             <p className="development-note">
-              I use AI tools in my development process. Product decisions, code
-              review, testing, and responsibility for what ships remain part of
-              my work.
+              AI tools are part of how I build. I make the product decisions,
+              review the code, test the behavior, and take responsibility for
+              what ships.
             </p>
           </div>
         </div>

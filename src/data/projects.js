@@ -1,3 +1,9 @@
+import gardenDiagram from "../assets/projects/system-illustrations/cozy-garden.svg";
+import journalDiagram from "../assets/projects/system-illustrations/boho-journal.svg";
+import trelloDiagram from "../assets/projects/system-illustrations/trello-automation.svg";
+import nestDiagram from "../assets/projects/system-illustrations/nest-quest.svg";
+import brainDiagram from "../assets/projects/system-illustrations/secondbrain.svg";
+import publishingDiagram from "../assets/projects/system-illustrations/lunara-publishing.svg";
 import questLesson from "../assets/projects/lunara-quest/illustrated-quest.webp";
 import questLessonCard from "../assets/projects/lunara-quest/illustrated-quest-card.webp";
 import labAccuracy from "../assets/projects/agent-behavior-lab/confirmatory-accuracy.webp";
@@ -41,7 +47,7 @@ export const projects = [
     stack: ["Next.js", "TypeScript", "Supabase", "OpenAI", "Upstash", "Vitest"],
     role: "Product direction, full-stack development & curriculum integration",
     problem:
-      "A homeschool day involves several overlapping systems: planning, instructions, independent work, feedback, and progress. Parents and learners need different views of the same work.",
+      "A homeschool day has a lot of moving parts: planning the week, explaining an activity, making room for independent work, and noticing what’s been learned. Parents and learners need their own ways into that shared picture.",
     approach:
       "Separate parent and learner experiences share a lesson and assignment model. Parents organize the week; learners see actionable quests, journal prompts, and rewards. Luna provides scoped assistance for planning and structured activity generation.",
     decisions: [
@@ -65,7 +71,7 @@ export const projects = [
       "Progress & rewards",
     ],
     outcome:
-      "An actively used family learning tool, with separate parent and learner portals, printable worksheet support, and a growing authored curriculum. Continuing work includes lesson QA and clearer independent-learning instructions.",
+      "Lunara Quest is in active use for family learning, with parent and learner portals, printable worksheets, and a growing authored curriculum. There’s still work to do on lesson checks and instructions that help learners get started on their own.",
     limits:
       "Family accounts and learner records remain private. The public capture shows an authored lesson; profile, activity, and journal screenshots are excluded.",
   },
@@ -105,7 +111,7 @@ export const projects = [
     role: "Founder, product design, engineering & publishing operations",
     live: "https://www.lunaraedit.com/",
     problem:
-      "Articles, learning resources, product listings, images, email signups, and checkout links need to stay consistent as a small publishing business grows.",
+      "Running The Lunara Edit means keeping track of articles, learning resources, product listings, images, signups, and checkout links. When I change something, I need that change to reach all the places it belongs without leaving an older version behind.",
     approach:
       "Shared article, product, and image manifests support an editorial site and resource storefront. Publication-aware routes manage drafts and timed releases; automated checks cover images, publishing, catalog data, email, and analytics.",
     decisions: [
@@ -129,7 +135,7 @@ export const projects = [
       "Consent-aware events",
     ],
     outcome:
-      "A live publishing and commerce site supporting original curriculum, editorial content, product discovery, downloads, and email acquisition. The engineering work extends into release checks and ongoing content operations.",
+      "The site is live, bringing original curriculum, articles, resource browsing, downloads, and email signups together. Alongside the visible pages, the work includes the release checks and everyday publishing tools that keep things running.",
     limits:
       "Commerce uses external checkout providers. A tracked checkout click is not presented as a sale.",
   },
@@ -185,7 +191,7 @@ export const projects = [
     role: "Product direction, content modeling & full-stack development",
     live: "https://theworldclearly.com/",
     problem:
-      "Making a story easier to read can accidentally remove the context that makes it understandable. A youth news product needs both approachable language and a durable evidence model.",
+      "A shorter news story can lose the very context a young reader needs to understand it. Making the language approachable means keeping a careful hold on the facts, sources, and connections behind the story.",
     approach:
       "The public reader and Payload newsroom share one TypeScript application. An issue supports First Look, Quick Read, Full Story, and Deep Dive, while topics, entities, and story relationships connect coverage across the archive.",
     decisions: [
@@ -209,7 +215,7 @@ export const projects = [
       "Connected archive",
     ],
     outcome:
-      "A live reader and newsroom with multi-mode issue publishing and a connected archive model. Further work focuses on reading-level quality, editorial workflow, and sustainable issue production.",
+      "The reader and newsroom are live, with four reading modes and a connected archive. The next work is in the details: refining reading levels, making editorial review easier, and finding a publishing rhythm that’s sustainable.",
     limits:
       "Reading-level generation is still being refined. This is an evolving publication, not a claim of fully automated editorial accuracy.",
   },
@@ -254,7 +260,7 @@ export const projects = [
     role: "Experimental design, evaluation tooling & analysis",
     source: repo("agent-behavior-lab"),
     problem:
-      "A model may change its answer after seeing other agents disagree. Measuring that behavior requires separating social framing from repetition, task difficulty, and answer-position effects.",
+      "What happens when a model sees other agents disagree with its answer? To investigate that question, the experiment needs to tease apart peer framing, repetition, task difficulty, and answer-position effects.",
     approach:
       "Inspect tasks separate datasets, prompt conditions, and scoring. Calibration, repeated-answer controls, a frozen confirmatory plan, and deterministic integrity tests make the experiment reviewable and repeatable.",
     decisions: [
@@ -278,12 +284,20 @@ export const projects = [
       "Paired comparison",
     ],
     outcome:
-      "The repository includes an exploratory pilot, repetition control, confirmatory report, analysis scripts, and deterministic tests. A separate cross-model replication design is implemented; its runs are a future milestone.",
+      "The pilot, repetition control, confirmatory report, analysis scripts, and deterministic tests are available in the repository. A separate cross-model replication design is ready in code; running it is the next research milestone.",
     limits:
       "Findings are specific to the tested model and task family. Cross-model generalization has not been established.",
   },
   {
     slug: "lunara-publishing",
+    illustration: {
+      src: publishingDiagram,
+      alt: "Canonical Markdown and YAML feed a validator and typed website model; print manifests reference the canonical records.",
+      caption:
+        "How the same curriculum records support the website and the print sequence.",
+      width: 1100,
+      height: 620,
+    },
     title: "Lunara Project",
     eyebrow: "Curriculum publishing system",
     category: "Products",
@@ -291,13 +305,13 @@ export const projects = [
     status: "Evolving publishing system",
     visual: "publishing",
     summary:
-      "Structured curriculum records, validation, and a Next.js publishing layer for original field studies.",
+      "A shared home for curriculum copy, metadata, and checks, connecting original field studies to site and print publishing.",
     stack: ["Next.js", "TypeScript", "YAML", "Markdown", "Node.js"],
     role: "Content architecture, validation tooling & product development",
     problem:
-      "When curriculum exists only inside PDFs and artwork, edits can drift between learner pages, catalog descriptions, and teaching notes.",
+      "Change a line in a lesson, and suddenly there are learner pages, catalog descriptions, and teaching notes to check too. I need a shared place for that content so an edit doesn’t become a small scavenger hunt through PDFs and artwork.",
     approach:
-      "Canonical learner copy lives in Markdown alongside YAML metadata, research notes, registries, and artifact manifests. A typed content loader validates records and maps authored metadata into the website model.",
+      "Learner copy lives in Markdown alongside YAML metadata, research notes, registries, and print manifests. A server-side TypeScript loader reads those files, validates them, and maps the authored fields into the website’s content model. The same record carries age and grade ranges, learning objectives, materials, review requirements, and publication status, keeping the catalog connected to the curriculum behind it.",
     decisions: [
       [
         "Validate at the content boundary",
@@ -315,12 +329,22 @@ export const projects = [
       "Site & print outputs",
     ],
     outcome:
-      "A versioned source-of-truth system for field studies, with curriculum validation, reporting scripts, and a website content layer. The publishing system continues to evolve alongside The Lunara Edit.",
+      "The content loader, validation, and reporting scripts are in place, giving site and print work a shared, versioned source to return to. The system is growing alongside The Lunara Edit, with more field studies still to come.",
     limits:
       "This case study covers publishing infrastructure; it does not imply every planned field study has shipped.",
+    nextStep:
+      "Run each new field study through the complete content, print, and publication review cycle.",
   },
   {
     slug: "secondbrain",
+    illustration: {
+      src: brainDiagram,
+      alt: "Source importers feed SQLite for structured records and ChromaDB for text embeddings; MCP tools query both stores.",
+      caption:
+        "How structured queries and text search work behind the same tool interface.",
+      width: 1100,
+      height: 620,
+    },
     title: "SecondBrain",
     eyebrow: "Personal data & AI tooling",
     category: "Data & APIs",
@@ -328,20 +352,40 @@ export const projects = [
     status: "Prototype",
     visual: "brain",
     summary:
-      "A self-hosted Python system combining structured records, vector retrieval, and an MCP tool interface.",
+      "A self-hosted Python project for finding scattered information through structured queries, semantic search, and MCP tools.",
     stack: ["Python", "SQLite", "ChromaDB", "MCP", "FastAPI"],
     source: repo("secondbrain"),
     problem:
-      "Useful personal information is spread across services that do not share a query interface.",
+      "Was it in an email, a document, or a note somewhere? SecondBrain explores how to search across those services without having to remember where something landed first.",
     approach:
-      "Source-specific ingestion pipelines feed SQLite for structured records and ChromaDB for embeddings. An MCP interface exposes tools to an AI client, while local sentence-transformer embeddings support semantic retrieval.",
+      "Python ingestion modules feed two complementary stores: SQLite holds structured records, while ChromaDB holds text and locally generated embeddings. Shared helpers handle database transactions, ingest logs, stable IDs, and vector upserts. A FastAPI tool interface exposes targeted queries for transactions, email, calendar events, documents, and cross-source search to an AI client.",
     outcome:
-      "A prototype architecture for ingestion, storage, retrieval, and AI tool access. The README marks financial ingestion as ready and other connectors as planned; connector completeness should be assessed individually.",
+      "The storage helpers and retrieval tools are built, extending beyond the first financial importer. This is still a personal prototype, with different connectors at different stages; the portfolio shows how it fits together without opening up personal records.",
     limits:
       "Personal data is excluded from this portfolio. No live data interface or financial records are embedded here.",
+    decisions: [
+      [
+        "Choose retrieval by the question",
+        "Dates, amounts, and categories use SQL filters; open-ended text queries use vector similarity. Email search merges semantic and keyword matches and removes duplicate IDs.",
+      ],
+      [
+        "Keep storage behind shared helpers",
+        "Connection cleanup, rollback, embedding initialization, and collection access live in one module. Individual importers can focus on translating their source into records.",
+      ],
+    ],
+    nextStep:
+      "Verify each importer and retrieval path against a small synthetic dataset before treating it as a dependable assistant.",
   },
   {
     slug: "nest-quest",
+    illustration: {
+      src: nestDiagram,
+      alt: "City JSON feeds metric selection and numeric normalization for Recharts, alongside a separate Leaflet map view.",
+      caption:
+        "A closer look at the chart\u2019s data preparation and geographic view.",
+      width: 1100,
+      height: 620,
+    },
     title: "Nest Quest",
     eyebrow: "Geospatial exploration",
     category: "Data & APIs",
@@ -353,14 +397,33 @@ export const projects = [
     stack: ["React", "React Leaflet", "Recharts", "Flask", "JSON"],
     source: repo("Nest_Quest"),
     problem:
-      "Choosing where to live means comparing several dimensions across places, not just searching for one number.",
+      "Choosing where to live means weighing housing costs, income, demographics, and the places themselves. Nest Quest brings those comparisons into one view so there’s less jumping between tables and maps.",
     approach:
-      "A React interface uses Leaflet for geographic comparison and Recharts for demographic and economic views. A Flask API serves the project data from JSON.",
+      "The React dashboard combines a Leaflet map with Recharts comparisons and demographic views. Its chart component reads city records from a separate Flask-backed JSON API and builds the metric selector from the returned fields. Selecting a metric reshapes each record into city/value pairs; currency and percentage strings are parsed before plotting, then formatted appropriately in tooltips.",
     outcome:
-      "An exploration of frontend visualization, geographic interfaces, and a separate Python API. The original backend hosting is no longer maintained, so the source is the reliable review entry point.",
+      "Nest Quest is now archived, but it remains a useful look at my work with maps, data preparation, and a separate Python API. The original backend is no longer maintained; the repository is the best place to explore the build.",
+    decisions: [
+      [
+        "Let the dataset supply the choices",
+        "The selector derives metric names from the API response and excludes geographic coordinates. The interface can expose available comparisons without a separately maintained menu.",
+      ],
+      [
+        "Normalize values before visualization",
+        "Monetary and percentage fields arrive as formatted strings. Parsing those values and dropping nonnumeric entries keeps chart preparation separate from presentation.",
+      ],
+    ],
+    nextStep:
+      "A revival would start with a versioned sample dataset, a maintained endpoint, and visible loading and failure states.",
   },
   {
     slug: "trello-automation",
+    illustration: {
+      src: trelloDiagram,
+      alt: "Markdown headings map to Trello cards, checklists, and tasks; each API write passes its returned parent ID to the next.",
+      caption: "The document hierarchy becomes the board hierarchy.",
+      width: 1100,
+      height: 620,
+    },
     title: "Markdown → Trello",
     eyebrow: "Workflow automation",
     category: "Data & APIs",
@@ -372,11 +435,23 @@ export const projects = [
     stack: ["Python", "REST APIs", "Markdown"],
     source: repo("Trello_API"),
     problem:
-      "Moving a written project plan into a task board involved repeatedly copying individual checklist items.",
+      "Once a plan is written, copying every heading and checklist item into Trello feels like doing the same work twice. This script handles that fiddly part.",
     approach:
-      "A parser interprets the project’s Markdown syntax and uses Trello’s REST API to create board objects. List mappings connect the written plan to its destination on the board.",
+      "The first line of a Markdown file selects a mapped Trello list. The parser converts the remaining Markdown to HTML, then interprets second-level headings as cards, third-level headings as checklists, and list items as tasks. Separate request helpers create each Trello object in order, passing the returned card and checklist IDs into the next operation.",
     outcome:
-      "A focused automation project connecting text parsing to an external service. Updates to existing cards and broader board management are future extensions, rather than current guarantees.",
+      "The script turns a structured Markdown plan into new Trello cards and checklists. It’s a focused helper for that first import; syncing later edits and avoiding duplicates on repeat runs are still work to do.",
+    decisions: [
+      [
+        "Use the document hierarchy as the interface",
+        "Headings and lists already express a project plan. Mapping that structure onto board objects makes the input readable before it ever reaches Trello.",
+      ],
+      [
+        "Separate parsing from API writes",
+        "The parser returns a list ID and structured card details. Request helpers handle card, checklist, and item creation, keeping document interpretation out of the HTTP layer.",
+      ],
+    ],
+    nextStep:
+      "Add input validation and a dry-run preview, then record created IDs so a repeat run can be deliberate.",
   },
   {
     slug: "lunara-ritual",
@@ -391,9 +466,23 @@ export const projects = [
     stack: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
     source: repo("lunara-ritual"),
     approach:
-      "Product browsing, collection storytelling, and cart state are brought together in a responsive single-page interface. Motion supports transitions between browsing and cart interactions.",
+      "A single React application brings together a sample product catalog, collection sections, brand storytelling, and an animated cart drawer. Adding an existing product increments its quantity; quantity changes remove zero-count items. The cart badge and total are derived from the same array, while separate state controls the drawer and mobile menu.",
     outcome:
-      "A frontend commerce study. Cart totals and quantity controls demonstrate interaction logic; payment processing and order fulfillment are outside the prototype.",
+      "The sample storefront lets you browse products, open the cart, and adjust quantities and totals. It’s a frontend prototype; taking payments, keeping carts between visits, managing inventory, and fulfilling orders would need a commerce backend.",
+    problem:
+      "A storefront can have plenty of personality while still making the everyday details easy: what’s in the cart, how many, and what it all costs.",
+    decisions: [
+      [
+        "Derive totals from the cart",
+        "The count and price total are reductions over cart items, rather than separate values to update after every interaction.",
+      ],
+      [
+        "Explore the interaction before the service layer",
+        "Local product data and component state make the browsing-to-cart loop easy to iterate on. Framer Motion handles drawer, menu, and product transitions.",
+      ],
+    ],
+    nextStep:
+      "Extract the cart and catalog into reusable modules before connecting a real commerce backend.",
   },
   {
     slug: "sacred-iron",
@@ -407,12 +496,34 @@ export const projects = [
       "An exploration of a Medusa commerce backend paired with a separate Next.js storefront.",
     stack: ["Medusa", "Next.js", "Node.js"],
     approach:
-      "The monorepo separates the backend API and admin from the customer storefront. Development runs the two processes independently, with migration and deployment preparation documented alongside the code.",
+      "A Medusa starter supplies the backend and admin, paired with a separate Next.js storefront in the same repository. The storefront adds brand-specific routes for apparel, gear, drops, a journal, and a catalog of symbolic marks. Mark records carry categories, meaning, and design notes, giving the brand’s content a structured place alongside the commerce integration.",
     outcome:
-      "Experience working with a headless commerce starter and its backend/storefront boundary. This is a development project, not a claim of a launched store or a commerce engine built from scratch.",
+      "The storefront now has its own brand content and routes on top of the Medusa foundation. Connecting that experience to the commerce service is ongoing, with the full path from browsing to a completed order still to check.",
+    problem:
+      "A store needs room for its own character, along with dependable tools for the catalog and the work behind an order.",
+    decisions: [
+      [
+        "Keep the commerce boundary explicit",
+        "Backend/admin and customer storefront run as separate applications. The starter provides the commerce foundation while the storefront owns presentation and brand content.",
+      ],
+      [
+        "Model the brand content as data",
+        "Typed mark records and category grouping support consistent browsing and reuse. This is a concrete layer of customization on top of the starter.",
+      ],
+    ],
+    nextStep:
+      "Validate the full catalog-to-order flow in a configured test environment.",
   },
   {
     slug: "boho-journal",
+    illustration: {
+      src: journalDiagram,
+      alt: "The React editor uses a Zustand store, which writes through a StorageAdapter contract to the selected Supabase adapter.",
+      caption:
+        "A look at how entries travel from the writing interface to storage.",
+      width: 1100,
+      height: 620,
+    },
     title: "Boho Journal",
     eyebrow: "Writing application",
     category: "Products",
@@ -421,11 +532,25 @@ export const projects = [
     visual: "journal",
     summary:
       "A journaling application exploring authenticated writing, rich text, media, and AI prompts.",
-    stack: ["React", "Supabase", "TipTap", "OpenAI"],
+    stack: ["Astro", "React", "Zustand", "Supabase", "TipTap", "OpenAI"],
     approach:
-      "A private writing interface and public reading experience support rich-text entries, media attachments, tags, and generated inspiration with fallback prompts.",
+      "Astro pages host React writing and reading interfaces. A Zustand store coordinates entry selection, search, and asynchronous CRUD through a storage adapter. Entries carry rich text, attachments, dates, tags, and optional mood or context. The storage contract includes list, lookup, create, update, delete, and attachment operations, with Supabase selected in the current store.",
     outcome:
-      "An exploration of content CRUD, protected routes, extensible editing, and the transition between private creation and public presentation.",
+      "The prototype brings rich-text entries, tags and context, saved content, and public reading routes together. AI writing prompts are also being explored, though the current browser-side integration needs more work before a public release.",
+    problem:
+      "A journal should be easy to settle into, with room to write and a way to find the entry you half remember. Editing and reading also need their own clear spaces.",
+    decisions: [
+      [
+        "Give persistence a replaceable contract",
+        "The editor and state layer depend on a StorageAdapter interface. Supabase, local, and Memos adapter files provide room to explore different persistence choices.",
+      ],
+      [
+        "Apply local changes after persistence succeeds",
+        "Create, update, and delete await storage before changing the local entry list. If deletion fails, the entry stays visible, so the interface doesn’t quietly promise a change it couldn’t save.",
+      ],
+    ],
+    nextStep:
+      "Move AI requests behind a server boundary and verify publication behavior with synthetic entries.",
   },
   {
     slug: "harmony-and-howls",
@@ -439,12 +564,33 @@ export const projects = [
       "A creative community and storytelling concept exploring a more personal kind of web interface.",
     stack: ["Next.js", "Tailwind CSS", "Framer Motion", "Supabase"],
     approach:
-      "A digital-hearth concept brings reflective writing, collections, and community-oriented interaction into a warm visual system.",
+      "The Next.js implementation includes a digital hearth where a contribution can carry a theme, intention, mood, and optional closing note. The client provides a short grounding timer, content feedback, filtering, and sorting. A server action validates the contribution, writes to Supabase, returns a structured result, and revalidates the hearth page after success.",
     outcome:
-      "A creative technology exploration within Lunara LLC. The related Harmony repository records an earlier React, TypeScript, and Vite implementation.",
+      "The hearth contribution flow is in place, with storytelling and community routes taking shape around it. There’s more to build toward the wider community idea; the related Harmony repository keeps an earlier React, TypeScript, and Vite version of that exploration.",
+    problem:
+      "Sharing something online can feel like dropping it into a very busy room. Harmony & Howls explores a warmer place for reflection, stories, and small moments of participation.",
+    decisions: [
+      [
+        "Validate on both sides of the form",
+        "The client and server action share the content validator. Immediate feedback helps the writer, while the write path performs its own check.",
+      ],
+      [
+        "Make the result part of the interaction",
+        "Pending, error, and success states belong to the submission flow. On success, the form resets and the page refreshes its contributions.",
+      ],
+    ],
+    nextStep:
+      "Exercise contribution failures, empty states, and community publishing rules in a configured demo environment.",
   },
   {
     slug: "cozy-garden",
+    illustration: {
+      src: gardenDiagram,
+      alt: "A timer dispatches updates to a garden reducer, which changes a plant\u2019s stage and remaining time; updated state informs the next tick.",
+      caption: "How a ticking clock becomes a change in an individual plant.",
+      width: 1100,
+      height: 620,
+    },
     title: "Cozy Garden Simulator",
     eyebrow: "Simulation & state",
     category: "Creative coding",
@@ -452,13 +598,27 @@ export const projects = [
     status: "Game prototype",
     visual: "garden",
     summary:
-      "A garden simulation exploring plant state, growth progression, and environmental systems.",
+      "A small digital garden exploring how plant growth, shared conditions, and application state fit together.",
     stack: ["React", "Redux", "nanoid"],
     source: repo("cozygardensim"),
     approach:
-      "Redux manages shared simulation state, while stable plant identifiers support individual entities. The project explores how growth, environmental conditions, and plant traits can interact.",
+      "Redux stores the plant collection and magic conditions. A nonvisual React component dispatches growth updates on a timer; the reducer advances plants through seed, sprouting, growing, flowering, mature, and harvestable stages. Plant IDs let actions target an individual entity. Additional actions cover breeding, harvesting, removal, and changes to the environment.",
     outcome:
-      "A learning project in state modeling and simulation interfaces. The repository describes a broader game vision; not every proposed mechanic is presented here as complete.",
+      "Plants have defined growth stages and Redux actions, with environmental and breeding rules still being tried out. It’s a game prototype with room to grow, especially around timing, balance, and how the systems work together.",
+    problem:
+      "Even a small digital garden has a lot going on: plants growing at their own pace, changing conditions, and a view that needs to keep up with both.",
+    decisions: [
+      [
+        "Keep the clock separate from the transition",
+        "The timer requests updates, while the reducer calculates the next plant state and resets the stage duration. Rendering does not own the growth rule.",
+      ],
+      [
+        "Represent plants as individual entities",
+        "Stable IDs allow quantity-independent operations: harvest one plant, remove another, or add offspring without treating the garden as a single progress value.",
+      ],
+    ],
+    nextStep:
+      "Make the simulation clock deterministic so growth and environmental modifiers can be checked without waiting in real time.",
   },
   {
     slug: "forgotten-keeper",
@@ -469,13 +629,27 @@ export const projects = [
     status: "Work in progress",
     visual: "keeper",
     summary:
-      "A Swift game prototype with inventory, spellcasting, and scene-based world restoration.",
-    stack: ["Swift", "Game systems", "Scene architecture"],
+      "A Swift and SpriteKit prototype exploring a library hub and scene-based world restoration.",
+    stack: ["Swift", "SpriteKit", "Scene architecture"],
     source: repo("theForgottenKeeper"),
     approach:
-      "Gameplay logic is organized around inventory, spells, scenes, and UI. A library hub and frozen-glade scene establish the structure for exploring and restoring book worlds.",
+      "A SpriteKit library scene lays out glowing book sprites relative to the screen size and gives each one a name for touch handling. Selecting the Frozen Glade book constructs the next scene and presents it with a fade transition. The destination scene loads its background and a placeholder welcome message; the other book destinations remain under construction.",
     outcome:
-      "A native programming exploration beyond the browser. The README identifies inventory and spellcasting as core progress; scenes remain in development and assets include placeholders.",
+      "The library interaction works, and the Frozen Glade has its first scene scaffold. Inventory, spells, and the restoration mechanics are still ahead; this is an early step into building beyond the browser.",
+    problem:
+      "The game begins with a library whose books open into damaged worlds. The first piece to build was that small moment of discovery: choosing a book and stepping into its scene.",
+    decisions: [
+      [
+        "Use named scene nodes for interaction",
+        "The library assigns each book an indexed node name. Touch handling translates that name into a destination choice instead of relying on fixed screen coordinates.",
+      ],
+      [
+        "Prove the scene boundary first",
+        "The Frozen Glade transition establishes the hub-to-world path before the larger restoration mechanics are complete. Layout positions scale from the scene dimensions.",
+      ],
+    ],
+    nextStep:
+      "Implement one small restoration interaction before expanding the inventory, spells, or additional worlds.",
   },
   {
     slug: "show-me-resistance",
@@ -487,12 +661,26 @@ export const projects = [
     visual: "civic",
     summary:
       "An Astro publishing project for making Missouri civic information easier to navigate.",
-    stack: ["Astro", "Markdown", "Vercel"],
+    stack: ["Astro", "TypeScript", "MySQL", "Markdown", "Vercel"],
     source: repo("show-me-resistance"),
     approach:
-      "Static pages, shared layouts, and Markdown content form the basis of a civic education and action-resource site.",
+      "Astro routes combine civic content with database-backed bill pages. A TypeScript query layer joins bill records and text summaries in MySQL, using a generated summary when available and falling back to the bill description. The detail page renders bill number, title, chamber, date, status, summary, and tags, with a return link that preserves the list’s status and page parameters.",
     outcome:
-      "An exploration of content-first static generation. Bill tracking, vote dashboards, and other elements of the project vision are development goals, not verified completed features.",
+      "Bill lookup and detail pages are built, including summary fallbacks and a way back to the reader’s place in the list. Before adding broader vote dashboards, the next work is checking imports, keeping the sources current, and validating a maintained deployment.",
+    problem:
+      "Following a bill gets harder when its number, status, and explanation live in different places. Bringing those details together gives readers somewhere clearer to start.",
+    decisions: [
+      [
+        "Keep database access behind a query layer",
+        "The route asks for bill details by number. A parameterized SQL query handles the lookup and closes its connection in a finally block.",
+      ],
+      [
+        "Preserve the reader’s place",
+        "The detail page carries filter and pagination parameters into its back link, keeping a closer connection between browsing bills and reading one in depth.",
+      ],
+    ],
+    nextStep:
+      "Verify bill imports and source freshness, then exercise list filtering and detail navigation against a maintained dataset.",
   },
   {
     slug: "homeschool-portal",
@@ -503,13 +691,27 @@ export const projects = [
     status: "Earlier iteration",
     visual: "quest",
     summary:
-      "The earlier homeschool platform repository, connecting lesson planning, learner portals, and Luna.",
+      "An earlier chapter of Lunara Quest, bringing lesson planning, learner portals, and Luna together.",
     stack: ["Next.js", "TypeScript", "Supabase", "OpenAI"],
     source: repo("homeschool_portal"),
     approach:
-      "Parent planning, lesson libraries, learner dashboards, and AI assistance established the foundations that continued into Lunara Quest v2.",
+      "The earlier Next.js application brings parent planning, learner routes, lesson tools, and AI assistance into one platform. Schedule items also carry actual minutes: a server action updates the selected record in Supabase, returns a success or error result, and revalidates the parent progress page so a saved time entry can appear in the reporting view.",
     outcome:
-      "Included as part of the product’s development history. The current Lunara Quest case study covers the newer implementation.",
+      "This was an earlier version of what became Lunara Quest, bringing together parent planning, learner pages, and the APIs behind them. I’ve kept it here so you can see how the project developed; the newer case study shows where it is now.",
+    problem:
+      "There's sometimes a difference between the week I put on the planner and the week that actually happens! This version connects planned activities with the time actually spent on them, so there’s a way to keep track when the day takes a different turn.",
+    decisions: [
+      [
+        "Track actual time on the schedule item",
+        "The time-update action writes actual minutes onto the existing scheduled activity. Planning and reporting can refer back to one record.",
+      ],
+      [
+        "Refresh the dependent view after a write",
+        "The time update revalidates parent progress rather than relying only on a local form change. Errors are returned to the calling interface.",
+      ],
+    ],
+    nextStep:
+      "Use this version as development history while consolidating new product work in Lunara Quest.",
   },
   {
     slug: "homeschool-haven",
@@ -524,9 +726,23 @@ export const projects = [
     stack: ["HTML", "SCSS", "JavaScript", "Bootstrap", "Grunt"],
     source: repo("homeschoolhaven"),
     approach:
-      "A Bootstrap starter was adapted into a homeschool dashboard. The work involved restructuring the template, exploring Sass and Grunt, and learning the deployment process.",
+      "A Bootstrap dashboard starter was adapted into an education-focused interface using HTML, SCSS, and JavaScript. The work involved reorganizing template navigation and content, learning the Sass and Grunt workflow, and deploying the result. Dashboard scripts include ApexCharts demonstrations with sample dates and generated values, establishing the visual direction for time and progress views.",
     outcome:
-      "An early demonstration rather than a fully functional platform. It provides a useful starting point for the longer path toward Lunara Quest.",
+      "This one goes back to 2022, when I was adapting a dashboard template and learning the tools around it. It’s an unfinished demo with sample chart data, but I’ve kept it alongside the later homeschool projects so you can see where that work began.",
+    problem:
+      "Subjects, assignments, and learning hours are easier to make sense of when they feel like parts of the same day. This early dashboard was a first attempt at bringing them together.",
+    decisions: [
+      [
+        "Start with an established dashboard vocabulary",
+        "Using a starter made it possible to explore navigation, cards, and information hierarchy while learning the frontend build process. The template foundation remains credited.",
+      ],
+      [
+        "Sketch the reporting experience with demo data",
+        "Sample chart values let the interface communicate the idea of learning-hour summaries. They demonstrate presentation rather than a working learner record system.",
+      ],
+    ],
+    nextStep:
+      "Keep this early milestone alongside the later projects so the progression is easy to follow.",
   },
   {
     slug: "justice-connect",
@@ -540,9 +756,24 @@ export const projects = [
       "An information architecture concept connecting people to local activism and community resources.",
     stack: ["User flows", "Information architecture", "Miro"],
     approach:
-      "Mapped discovery paths for events, volunteering, resources, and community stories. The project explored how first-time participants could find an actionable next step.",
+      "The concept maps entry paths for events, volunteering, resources, and community stories in Miro. It considers both someone arriving for the first time and organizations trying to make participation easier to find. The work concentrates on how content is grouped and how a visitor reaches a useful next step, before committing to a visual interface or application stack.",
     outcome:
-      "Retained from the original portfolio as a design foundation. Wireframes, interactive prototypes, and usability findings are not presented as completed deliverables.",
+      "This one comes from my original UX portfolio, where I was thinking through how people find an opportunity and decide what to do next. It’s at the user-flow and information-architecture stage; wireframes, an interactive prototype, and usability research would come later.",
+    problem:
+      "Wanting to help is a good beginning, but finding a local event, volunteer opportunity, or useful resource can take some searching. Justice Connect explores how to make that first step easier to find.",
+    decisionsTitle: "Design decisions",
+    decisions: [
+      [
+        "Organize around participation",
+        "Events and volunteering provide action-oriented routes, while resources and stories support visitors who need context before taking part.",
+      ],
+      [
+        "Map the journey before choosing components",
+        "User flows expose the sequence from discovery to participation. That work provides a foundation for later navigation and screen design without implying a built platform.",
+      ],
+    ],
+    nextStep:
+      "Validate the discovery paths with prospective participants before moving into wireframes.",
   },
 ];
 

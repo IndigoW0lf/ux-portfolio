@@ -52,3 +52,20 @@ The Lunara Edit and The World, Clearly now use five supplied product captures. O
 - The Quest gallery uses only the 1.08.26 PM illustrated lesson capture. The other five supplied Quest captures are not copied to the public repository because they show family profiles, learner activity, or journal content.
 - The two research figures were visually inspected and generated from the published confirmatory summary. Script assertions verify the paired counts total 48 and agree with the repetition and peer accuracy totals. The JSON source snapshot records the retrieved report blob SHA.
 - Figure generation makes no model/API calls and does not modify the Agent Behavior Lab project or its raw logs.
+
+## Secondary case studies — 2026-10-23
+
+- Production build succeeds without application lint warnings.
+- All five existing Jest tests pass.
+- Browser checked all fourteen secondary project routes at 1440, 768, 390, and 320 px: problem, 02 implementation, 03 decisions, and current state render without horizontal overflow.
+- Six implementation SVGs decode at their intrinsic dimensions, have descriptive alternative text, and expose working full-size links.
+- Engineering/design section navigation works at desktop widths. The sidebar navigation is intentionally hidden by the existing mobile layout.
+- Existing full-site browser checks pass: eighteen routes, refresh, project filters, publication demo, unknown routes, five responsive widths, and keyboard skip link.
+- No page or local HTTP errors during browser checks. New illustrations visually inspected; featured galleries and homepage retain their existing layout.
+- Source evidence and corrections are recorded in `CONTENT_SOURCES.md`. Checks cover the portfolio, not live integrations in the linked projects.
+
+Publishing remains a separate GitHub Pages step after merge; creating this PR does not update the public site.
+
+## Light voice pass — 2026-10-23
+
+Copy-only changes preserve layout, technical mechanisms, links, and project scope. Production build and all five Jest tests pass. Full-site and secondary-case-study browser checks pass again, including responsive widths down to 320 px, without runtime or HTTP errors.
