@@ -98,3 +98,9 @@ The moth note cards are native router links to their respective projects, with v
 The overview now explains the experiment in plain language without giving away accuracy counts. Each condition has its own prediction, reveal, explanation, and next step. Only the completed activity shows the comparison and restart button. No model requests, new study results, or individual question logs were added.
 
 Eight Jest tests pass, including all three conditions, hidden future results, preserved guesses, and restart. Chromium verified the complete flow using keyboard input, including zero and maximum predictions, locked revealed inputs, next-round progression, exact recorded outcomes, saved guesses, final paired counts/methods/source, and clearing all prior guesses on restart. Six widths down to 320 px fit throughout the rounds and expanded summary without horizontal overflow or runtime/HTTP errors. Initial and completed desktop/mobile layouts visually inspected.
+
+## Analytics, navigation, and share preview — 2026-10-23
+
+Added Vercel Web Analytics 2.0.1 at the application root. Explicit HashRouter path/route props keep case studies distinct and avoid extra views from section anchors. Analytics renders only on the portfolio's custom and Vercel preview hosts, so local and GitHub Pages builds do not request unavailable Vercel endpoints. The existing TypeScript 4 and Testing Library DOM peers are now explicit development dependencies; a normal npm ci dry run passes without legacy-peer flags. CRA's Jest resolver uses the SDK's CommonJS entry point.
+
+All eight Jest tests and the root-domain production build pass. Chromium with a controlled SDK script verifies one script injection, a home view, a project view, no extra section-jump view, and return navigation. Canonical/Twitter metadata, the 1200 × 630 share image, and the main-navigation Tiny lab link were checked. The preview was visually inspected. Live endpoint checks follow deployment.
