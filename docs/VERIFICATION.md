@@ -92,3 +92,9 @@ The visitor story runs from a keyboard-adjustable prediction through a reveal of
 ## Direct field-note links — 2026-10-23
 
 The moth note cards are native router links to their respective projects, with visible link arrows. Hover or keyboard focus updates the preview; activating a card navigates directly. Eight Jest tests and the production build pass. Chromium verified all three destinations with Enter, pointer navigation, preview/destination agreement, and six widths down to 320 px without overflow or runtime/HTTP errors. Mobile composition visually inspected. The friendlier tiny-lab margin note and heading were also checked in the browser.
+
+## Three-round tiny lab — 2026-10-23
+
+The overview now explains the experiment in plain language without giving away accuracy counts. Each condition has its own prediction, reveal, explanation, and next step. Only the completed activity shows the comparison and restart button. No model requests, new study results, or individual question logs were added.
+
+Eight Jest tests pass, including all three conditions, hidden future results, preserved guesses, and restart. Chromium verified the complete flow using keyboard input, including zero and maximum predictions, locked revealed inputs, next-round progression, exact recorded outcomes, saved guesses, final paired counts/methods/source, and clearing all prior guesses on restart. Six widths down to 320 px fit throughout the rounds and expanded summary without horizontal overflow or runtime/HTTP errors. Initial and completed desktop/mobile layouts visually inspected.
