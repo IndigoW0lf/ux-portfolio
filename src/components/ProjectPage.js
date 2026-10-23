@@ -32,6 +32,11 @@ export default function ProjectPage() {
           <p className="case-summary">{project.summary}</p>
           <div className="case-actions">
             <span className="status">{project.status}</span>
+            {project.slug === "agent-behavior-lab" ? (
+              <HashLink className="text-link" to="/#tiny-lab">
+                Try the tiny lab ↓
+              </HashLink>
+            ) : null}
             {project.live ? (
               <a
                 className="text-link"

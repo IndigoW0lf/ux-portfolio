@@ -6,6 +6,8 @@ import ProjectVisual from "./ProjectVisual";
 import WorkCollection from "./WorkCollection";
 import EngineeringDemo from "./EngineeringDemo";
 import CuriosityNotes from "./CuriosityNotes";
+import TinyLab from "./TinyLab";
+import BuildNotes from "./BuildNotes";
 
 export default function HomePage() {
   const resumeUrl = `${process.env.PUBLIC_URL || ""}/resume/Kai-Indigo-Wolf-Resume.pdf`;
@@ -125,6 +127,8 @@ export default function HomePage() {
           Explore the full collection <span aria-hidden="true">↓</span>
         </HashLink>
       </section>
+      <TinyLab />
+      <BuildNotes />
       <section id="approach" className="approach section-pad">
         <div className="shell">
           <div className="section-heading">

@@ -35,6 +35,10 @@ README-backed descriptions are not independent audits of those products. This re
 
 ## Important presentation choices
 
+- The tiny lab is a prediction-and-reveal explorer of the existing public Study 001 confirmatory report. Its three accuracy totals, paired outcomes, model, run date, and source come from `src/data/agent-behavior-results.json`, checked against the report again on 2026-10-23. No new model requests or individual response logs are used. Condition descriptions summarize the design rather than quoting complete prompts. Paired totals are not presented as sequential changes within a conversation.
+- Build notes describe the already reviewed repetition control, canonical curriculum loader/manifests, and four reading modes. They do not invent personal debugging incidents, user feedback, or historical motivations. Each links to its corresponding case study.
+- The résumé's displayed portfolio address and PDF URI annotation now use `https://www.indigowolf.tech/`.
+
 - No child names, family account records, learner photos, private dashboards, or personal financial records.
 - The Lunara Edit and The World, Clearly use screenshots supplied by Kai on 2026-10-23. Full-size assets preserve the original pixels using lossless WebP; smaller card thumbnails are resized separately. Other projects retain labeled illustrations. Captures demonstrate interface presentation, not a live embedded product.
 - The small publication demo uses illustrative records, explicitly distinguished from the live catalog.
