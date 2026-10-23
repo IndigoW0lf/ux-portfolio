@@ -1,36 +1,42 @@
-# Kai Indigo Wolf Portfolio
+# Kai Indigo Wolf — Software Engineering Portfolio
 
-A personal portfolio website showcasing my projects and skills. This portfolio is built with React and custom CSS, and is deployed on GitHub Pages. It serves as a live example of my work as a UX/UI Designer & Developer.
+A React portfolio focused on software engineering, independent product development, and research tooling. Includes 18 project overviews, four featured case studies, searchable category filters, and an interactive publication-rules demo.
 
-## Table of Contents
-- [Kai Indigo Wolf Portfolio](#kai-indigo-wolf-portfolio)
-  - [Table of Contents](#table-of-contents)
-  - [Demo](#demo)
-  - [Features](#features)
-  - [Technologies Used](#technologies-used)
-  - [Installation](#installation)
+## Develop
 
-## Demo
-Check out the live site here:  
-[https://indigow0lf.github.io/ux-portfolio](https://indigow0lf.github.io/ux-portfolio)
+```sh
+npm ci
+npm start
+```
 
-## Features
-- **Responsive Design:** Looks great on both desktop and mobile devices.
-- **Modern Aesthetics:** Overlaid header on a full-screen hero image with a transparent sage green background.
-- **Smooth Navigation:** Quick links to Home, About Me, What I Do, Projects, and Contact.
-- **Social Media Integration:** Social icons link to my LinkedIn and GitHub profiles.
-- **Scroll Animations:** Subtle animations as you scroll through the page.
+## Validate
 
-## Technologies Used
-- **React** (via Create React App)
-- **CSS3**
-- **Git & GitHub**
-- **GitHub Pages** (for hosting)
-- **AOS (Animate On Scroll)** for scroll-triggered animations
+```sh
+CI=true npm test -- --watchAll=false --runInBand
+npm run build
+npm run format:check
+```
 
-## Installation
+The project retains its Create React App build and React Router hash routes for GitHub Pages compatibility. The Jest alias in `package.json` lets CRA's older resolver use React Router 7's actual CommonJS entry point.
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/indigow0lf/ux-portfolio.git
-   cd my-portfolio
+## Content & components
+
+- `src/data/projects.js`: project catalog, status, technologies, case-study copy, and public links.
+- `src/components/HomePage.js`: positioning, selected work, approach, experience, and contact.
+- `src/components/ProjectPage.js`: data-driven case studies and project navigation.
+- `src/components/WorkCollection.js`: category filtering, text search, and empty states.
+- `src/components/EngineeringDemo.js`: deterministic publication-rule example using explicitly illustrative records.
+- `src/components/ProjectVisual.js`: labeled editorial concepts and system illustrations, not product screenshots.
+- `src/fonts/`: self-hosted Latin fonts and their licenses.
+- `docs/CONTENT_SOURCES.md`: editorial provenance, claim boundaries, and follow-up opportunities.
+- `docs/VERIFICATION.md`: verification scope and results.
+
+Keep project copy specific about shipped behavior versus prototypes and future work. Public source links should only point to public repositories. Use synthetic content for demonstrations; never copy family records, private dashboards, access tokens, or customer data into this repository.
+
+## Hosting
+
+The existing `homepage` remains `https://indigow0lf.github.io/ux-portfolio`. A production build expects the `/ux-portfolio/` subdirectory. Hash routes such as `/ux-portfolio/#/projects/lunara-quest` survive direct opening and refresh on static hosting.
+
+`npm run deploy` publishes the build to the `gh-pages` branch. Run it only when the reviewed version is ready to become public. This branch does not publish a deployment automatically.
+
+For a root-domain host, update `homepage` before building. The source project and current hosting URL retain the old repository name so existing addresses continue working.
