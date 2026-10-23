@@ -64,20 +64,23 @@ export default function CuriosityNotes() {
           aria-label="Pick a thread to explore"
         >
           {threads.map((thread, index) => (
-            <button
+            <Link
               className={`thread-note thread-${thread.id}`}
               key={thread.id}
-              type="button"
-              aria-pressed={activeId === thread.id}
-              aria-controls="thread-detail"
-              onClick={() => setActiveId(thread.id)}
+              to={thread.path}
+              data-active={activeId === thread.id}
+              aria-label={`Explore ${thread.project}: ${thread.question}`}
+              onMouseEnter={() => setActiveId(thread.id)}
+              onFocus={() => setActiveId(thread.id)}
             >
               <span className="thread-label">
                 0{index + 1} / {thread.label}
               </span>
               <span className="thread-question">{thread.question}</span>
-              <span className="thread-pin" aria-hidden="true" />
-            </button>
+              <span className="thread-arrow" aria-hidden="true">
+                ↗
+              </span>
+            </Link>
           ))}
         </div>
         <span className="notes-aside" aria-hidden="true">
@@ -95,7 +98,7 @@ export default function CuriosityNotes() {
           {active.project} <span aria-hidden="true">↗</span>
         </Link>
       </div>
-      <span className="notes-invitation">Pick a note to see where it led.</span>
+      <span className="notes-invitation">Follow a note into the project.</span>
     </aside>
   );
 }

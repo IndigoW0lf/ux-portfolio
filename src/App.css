@@ -2135,6 +2135,7 @@
   width: 166px;
   min-height: 72px;
   text-align: left;
+  text-decoration: none;
   padding: 11px 14px;
   border: 1px solid #d9d6cb;
   border-radius: 2px;
@@ -2150,7 +2151,7 @@
 .thread-note:hover {
   box-shadow: 0 7px 15px #3d3a2d17;
 }
-.thread-note[aria-pressed="true"] {
+.thread-note[data-active="true"] {
   border-color: var(--thread-ink);
   box-shadow: 0 4px 12px #65548512;
 }
@@ -2173,17 +2174,13 @@
   line-height: 1.2;
   font-weight: 400;
 }
-.thread-pin {
+.thread-arrow {
   position: absolute;
   right: 10px;
-  top: 10px;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #b7b9a6;
-}
-.thread-note[aria-pressed="true"] .thread-pin {
-  background: var(--thread-ink);
+  top: 8px;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--thread-ink);
 }
 .thread-learning {
   top: 19px;
