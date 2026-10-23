@@ -111,3 +111,7 @@ Kai approved a luna-moth/field-notes direction and explicitly authorized merge a
 The supplied career-history text is the source for the public one-page resume and the high-level Pantheon hackathon highlight. It supplies current work, internship and freelance experience, Tech Elevator training, and prior supervisory experience. The resume emphasizes software engineering; the full supplied history and employer incident details are not copied into the site. Public contact links use the portfolio’s existing email, GitHub, and LinkedIn URLs; the resume includes city/state. No street address or phone number is added. No degree completion or graduation date is inferred.
 
 `public/resume/Kai-Indigo-Wolf-Resume.pdf` contains selectable text and clickable contact links. `scripts/render_resume.py` rebuilds it with ReportLab and checks its one-page length and key text. The PDF was rendered and visually inspected before publication.
+
+## Painted moth replacement — 2026-10-23
+
+Kai requested a generated luna moth instead of the code-drawn illustration, retaining layered notes with slightly smaller cards. The transparent raster asset and generation prompt are documented in `IMAGE_SOURCES.md`. The “making things” note now reads “Can I make this a little easier?” No project capabilities or resume content changed.

@@ -435,7 +435,7 @@ export const projects = [
     stack: ["Python", "REST APIs", "Markdown"],
     source: repo("Trello_API"),
     problem:
-      "Once a plan is written, copying every heading and checklist item into Trello feels like doing the same work twice. This script handles that fiddly part.",
+      "Once a plan is written, copying every heading and checklist item into Trello feels like doing the same work twice. This script handles that repetitive part.",
     approach:
       "The first line of a Markdown file selects a mapped Trello list. The parser converts the remaining Markdown to HTML, then interprets second-level headings as cards, third-level headings as checklists, and list items as tasks. Separate request helpers create each Trello object in order, passing the returned card and checklist IDs into the next operation.",
     outcome:
