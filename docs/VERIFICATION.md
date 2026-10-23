@@ -75,3 +75,7 @@ Copy-only changes preserve layout, technical mechanisms, links, and project scop
 Production build and six Jest tests pass, including selected-question/project navigation. Browser verification checks all three notes, exclusive pressed state, Space activation, project destinations, PDF response bytes and content type, and contact links. Hero checked at 1440, 1024, 768, 700, 390, and 320 px with no horizontal overflow. Full-site checks pass for eighteen routes, filters, publication demo, refresh, unknown routes, and skip link. No runtime or HTTP errors. Reduced-motion styling disables note transitions.
 
 The one-page PDF was text-extracted, checked for expected names/contact information, rendered with Poppler, and visually inspected. A public live-site check follows deployment.
+
+## Painted moth replacement — 2026-10-23
+
+Production build and all six Jest tests pass. Browser checks confirm the 900-pixel image decodes, the three note controls and destinations work, keyboard activation remains available, and the layout fits 1440/1024/768/700/390/320 px. Desktop and mobile compositions visually inspected. No runtime or HTTP errors; PDF and contact checks continue to pass. WebP export retains an alpha channel and is approximately 100 KB.

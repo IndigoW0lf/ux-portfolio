@@ -1818,35 +1818,19 @@
 }
 .notes-moth {
   position: absolute;
-  width: 82%;
+  width: 94%;
   height: auto;
-  left: 20%;
-  top: -15px;
-  color: #8e9a80;
+  left: 3%;
+  top: -8px;
   transform: rotate(8deg);
-}
-.moth-wing {
-  fill: #dfe4d1;
-  fill-opacity: 0.52;
-}
-.moth-eye {
-  fill: #b2a6c2;
-  fill-opacity: 0.42;
-}
-.moth-trace {
-  stroke: var(--thread-ink);
-  opacity: 0.7;
-}
-.notes-stars {
-  color: #a29a81;
 }
 .thread-note {
   position: absolute;
   z-index: 1;
-  width: 185px;
-  min-height: 79px;
+  width: 166px;
+  min-height: 72px;
   text-align: left;
-  padding: 13px 18px 12px;
+  padding: 11px 14px;
   border: 1px solid #d9d6cb;
   border-radius: 2px;
   background: #fcfbf5;
@@ -1880,8 +1864,8 @@
 .thread-question {
   display: block;
   font-family: var(--serif);
-  font-size: 18px;
-  line-height: 1.15;
+  font-size: 16px;
+  line-height: 1.2;
   font-weight: 400;
 }
 .thread-pin {
@@ -1966,9 +1950,9 @@
     padding: 22px 18px 16px;
   }
   .thread-note {
-    width: 160px;
-    padding-left: 13px;
-    padding-right: 13px;
+    width: 148px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
   .thread-question {
     font-size: 16px;
@@ -1990,9 +1974,9 @@
     padding: 20px 19px 16px;
   }
   .thread-note {
-    width: 159px;
-    min-height: 78px;
-    padding: 12px 14px;
+    width: 145px;
+    min-height: 72px;
+    padding: 10px 12px;
   }
   .thread-question {
     font-size: 16px;
@@ -2029,10 +2013,10 @@
 
 @media (max-width: 700px) {
   .notes-moth {
-    width: 70%;
-    left: 36%;
-    top: -8px;
-    transform: none;
+    width: 96%;
+    left: 2%;
+    top: 0;
+    transform: rotate(5deg);
   }
   .notes-aside {
     display: none;

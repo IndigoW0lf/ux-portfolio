@@ -23,7 +23,7 @@ The project retains its Create React App build and React Router hash routes for 
 
 - `src/data/projects.js`: project catalog, status, technologies, case-study copy, and public links.
 - `src/components/HomePage.js`: positioning, selected work, approach, experience, resume download, and contact.
-- `src/components/CuriosityNotes.js`: interactive field notes and a native SVG circuit-moth motif.
+- `src/components/CuriosityNotes.js`: interactive field notes and a generated watercolor luna-moth illustration.
 - `src/components/ProjectPage.js`: data-driven case studies and project navigation.
 - `src/components/WorkCollection.js`: category filtering, text search, and empty states.
 - `src/components/EngineeringDemo.js`: deterministic publication-rule example using explicitly illustrative records.
