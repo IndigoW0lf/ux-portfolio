@@ -65,3 +65,7 @@ The Lunara Edit and The World, Clearly now use five supplied product captures. O
 - Source evidence and corrections are recorded in `CONTENT_SOURCES.md`. Checks cover the portfolio, not live integrations in the linked projects.
 
 Publishing remains a separate GitHub Pages step after merge; creating this PR does not update the public site.
+
+## Light voice pass — 2026-10-23
+
+Copy-only changes preserve layout, technical mechanisms, links, and project scope. Production build and all five Jest tests pass. Full-site and secondary-case-study browser checks pass again, including responsive widths down to 320 px, without runtime or HTTP errors.

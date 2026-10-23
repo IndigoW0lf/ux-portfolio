@@ -19,8 +19,9 @@ export default function WorkCollection() {
             </h2>
           </div>
           <p>
-            Products, prototypes, scripts, and experiments. Different tools,
-            different problems, and plenty learned along the way.
+            A mix of products, prototypes, scripts, and experiments, including
+            the earlier builds that helped me find my way. Browse by area or
+            search for a tool you’re curious about.
           </p>
         </div>
         <div className="collection-tools">

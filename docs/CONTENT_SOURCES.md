@@ -99,3 +99,7 @@ Additional implementation evidence read for this pass:
 Lunara Project retains the previously reviewed `lib/content/curriculum.ts` evidence. Justice Connect retains only its confirmed original flow/IA scope.
 
 Six SVG implementation sketches were authored for Lunara Project, SecondBrain, Nest Quest, Markdown → Trello, Boho Journal, and Cozy Garden. They illustrate source-grounded relationships and are explicitly labeled as sketches, with accessible descriptions and full-size links. They are not screenshots or evidence of a deployed service. No external database, private journal, financial record, or learner account was accessed. Next steps are proposed development directions, not commitments or completed work.
+
+## Light voice pass — 2026-10-23
+
+Applied The Lunara Edit Brand Voice at Kai’s request, scaled to a personal engineering portfolio. Warmed project problems and current-state paragraphs, selected summaries/captions, and the home/about/collection introductions. Implementation mechanisms, research results, stack metadata, privacy boundaries, and unfinished-work distinctions are preserved. No new project capabilities or personal anecdotes were added. The site layout is unchanged.
