@@ -26,7 +26,9 @@ The project retains its Create React App build and React Router hash routes for 
 - `src/components/ProjectPage.js`: data-driven case studies and project navigation.
 - `src/components/WorkCollection.js`: category filtering, text search, and empty states.
 - `src/components/EngineeringDemo.js`: deterministic publication-rule example using explicitly illustrative records.
-- `src/components/ProjectVisual.js`: labeled editorial concepts and system illustrations, not product screenshots.
+- `src/components/ProjectVisual.js`: real screenshot covers when available, with labeled system illustrations for other projects.
+- `src/components/ProjectGallery.js`: keyboard-accessible screenshot selectors, captions, and full-size image links.
+- `src/assets/projects/`: supplied product captures, with lossless full-size WebP images and smaller card thumbnails.
 - `src/fonts/`: self-hosted Latin fonts and their licenses.
 - `docs/CONTENT_SOURCES.md`: editorial provenance, claim boundaries, and follow-up opportunities.
 - `docs/VERIFICATION.md`: verification scope and results.
@@ -40,3 +42,7 @@ The existing `homepage` remains `https://indigow0lf.github.io/ux-portfolio`. A p
 `npm run deploy` publishes the build to the `gh-pages` branch. Run it only when the reviewed version is ready to become public. This branch does not publish a deployment automatically.
 
 For a root-domain host, update `homepage` before building. The source project and current hosting URL retain the old repository name so existing addresses continue working.
+
+## Research figures
+
+Agent Behavior Lab has a CLI workflow rather than an application UI. Its portfolio images are research figures, labeled separately from product screenshots, with a link to the published confirmatory report. Rebuild them with `python scripts/render_lab_figures.py` in a Python environment containing matplotlib and Pillow. The script uses the reviewed JSON summary; it does not run evaluations or call model APIs.

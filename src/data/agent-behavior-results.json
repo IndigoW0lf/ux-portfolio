@@ -1,0 +1,31 @@
+{
+  "study": "Study 001: Confirmatory social-framing result",
+  "runDate": "2026-09-16",
+  "model": "openai/gpt-5.6-luna",
+  "items": 48,
+  "source": "https://github.com/IndigoW0lf/agent-behavior-lab/blob/main/results/study-001-confirmatory.md",
+  "conditions": [
+    {
+      "label": "Baseline",
+      "correct": 43
+    },
+    {
+      "label": "Repetition control",
+      "correct": 29
+    },
+    {
+      "label": "Named peers",
+      "correct": 10
+    }
+  ],
+  "paired": {
+    "bothCorrect": 9,
+    "correctToWrong": 20,
+    "wrongToCorrect": 1,
+    "bothWrong": 18
+  },
+  "exclusions": 0,
+  "mcnemarP": 2.09808e-5,
+  "limitations": "One model, one provider, one prompt format, and one generated code-tracing family; simulated peer testimony. Not evidence of human-like conformity or cross-model generalization.",
+  "sourceBlobSha": "fe84aae6ba076fc39c52e1e0c2bfefce5fe1ae70"
+}

@@ -32,3 +32,23 @@ Desktop and mobile layouts were visually inspected. Screenshots in this folder s
 - No family accounts, private dashboards, or live customer records were opened.
 - Existing Create React App tooling emits non-blocking Browserslist and Node deprecation notices. A build-tool migration is outside this refresh.
 - Keyboard and responsive checks do not constitute a complete assistive-technology or WCAG audit.
+
+## Screenshot gallery follow-up — 2026-10-23
+
+The Lunara Edit and The World, Clearly now use five supplied product captures. Other projects retain their labeled illustrations.
+
+- Four Jest tests pass, including gallery selection, full-size link behavior, and selection reset when navigating between projects.
+- The production build passes with GitHub Pages asset paths preserved.
+- Chromium confirmed that all five gallery images and both card covers load. Gallery selectors, keyboard activation, full-size asset links, and selection reset passed.
+- Home/card previews and both galleries were visually inspected. No horizontal document overflow occurred at 1440, 768, 390, or 320 px while selecting any gallery image.
+- No page runtime or HTTP errors occurred in the screenshot checks.
+- All five full-size WebP files were compared against the supplied PNGs and match their decoded RGB pixels exactly. Smaller card covers are separate resized assets.
+- Original uploads remain unchanged. No messages, production deployments, or edits to the underlying product sites were performed.
+
+## Quest and research-media follow-up — 2026-10-23
+
+- Five Jest tests pass, including research labeling, source-link preservation, gallery selection, and cross-project reset.
+- Production build passes. Chromium checks load all eight product/research gallery images and four card covers, test keyboard selection and full-size links, and check all four galleries at 1440/768/390/320 px without horizontal overflow or page/HTTP errors.
+- The Quest gallery uses only the 1.08.26 PM illustrated lesson capture. The other five supplied Quest captures are not copied to the public repository because they show family profiles, learner activity, or journal content.
+- The two research figures were visually inspected and generated from the published confirmatory summary. Script assertions verify the paired counts total 48 and agree with the repetition and peer accuracy totals. The JSON source snapshot records the retrieved report blob SHA.
+- Figure generation makes no model/API calls and does not modify the Agent Behavior Lab project or its raw logs.
