@@ -111,7 +111,7 @@ export const projects = [
     role: "Founder, product design, engineering & publishing operations",
     live: "https://www.lunaraedit.com/",
     problem:
-      "A small publishing business quickly gathers a lot of pieces: articles, learning resources, product listings, images, signups, and checkout links. Keeping them in agreement matters when one person is tending the whole thing.",
+      "Running The Lunara Edit means keeping track of articles, learning resources, product listings, images, signups, and checkout links. When I change something, I need that change to reach all the places it belongs without leaving an older version behind.",
     approach:
       "Shared article, product, and image manifests support an editorial site and resource storefront. Publication-aware routes manage drafts and timed releases; automated checks cover images, publishing, catalog data, email, and analytics.",
     decisions: [
@@ -309,7 +309,7 @@ export const projects = [
     stack: ["Next.js", "TypeScript", "YAML", "Markdown", "Node.js"],
     role: "Content architecture, validation tooling & product development",
     problem:
-      "A small curriculum edit can turn into a hunt through learner pages, catalog descriptions, and teaching notes. Keeping the words inside separate PDFs and artwork makes it all too easy for those versions to drift apart.",
+      "Change a line in a lesson, and suddenly there are learner pages, catalog descriptions, and teaching notes to check too. I need a shared place for that content so an edit doesn’t become a small scavenger hunt through PDFs and artwork.",
     approach:
       "Learner copy lives in Markdown alongside YAML metadata, research notes, registries, and print manifests. A server-side TypeScript loader reads those files, validates them, and maps the authored fields into the website’s content model. The same record carries age and grade ranges, learning objectives, materials, review requirements, and publication status, keeping the catalog connected to the curriculum behind it.",
     decisions: [
@@ -356,7 +356,7 @@ export const projects = [
     stack: ["Python", "SQLite", "ChromaDB", "MCP", "FastAPI"],
     source: repo("secondbrain"),
     problem:
-      "Finding something shouldn’t depend on remembering which app it landed in. SecondBrain explores a shared way to search information that’s scattered across different services.",
+      "Was it in an email, a document, or a note somewhere? SecondBrain explores how to search across those services without having to remember where something landed first.",
     approach:
       "Python ingestion modules feed two complementary stores: SQLite holds structured records, while ChromaDB holds text and locally generated embeddings. Shared helpers handle database transactions, ingest logs, stable IDs, and vector upserts. A FastAPI tool interface exposes targeted queries for transactions, email, calendar events, documents, and cross-source search to an AI client.",
     outcome:
@@ -435,7 +435,7 @@ export const projects = [
     stack: ["Python", "REST APIs", "Markdown"],
     source: repo("Trello_API"),
     problem:
-      "Moving a written plan into Trello shouldn’t mean copying every heading and checklist item by hand.",
+      "Once a plan is written, copying every heading and checklist item into Trello feels like doing the same work twice. This script handles that fiddly part.",
     approach:
       "The first line of a Markdown file selects a mapped Trello list. The parser converts the remaining Markdown to HTML, then interprets second-level headings as cards, third-level headings as checklists, and list items as tasks. Separate request helpers create each Trello object in order, passing the returned card and checklist IDs into the next operation.",
     outcome:
@@ -697,9 +697,9 @@ export const projects = [
     approach:
       "The earlier Next.js application brings parent planning, learner routes, lesson tools, and AI assistance into one platform. Schedule items also carry actual minutes: a server action updates the selected record in Supabase, returns a success or error result, and revalidates the parent progress page so a saved time entry can appear in the reporting view.",
     outcome:
-      "This earlier version brought together much of the planning, learner experience, and API structure that led into Lunara Quest. It stays here as part of that development story; the newer case study shows where the product is now.",
+      "This was an earlier version of what became Lunara Quest, bringing together parent planning, learner pages, and the APIs behind them. I’ve kept it here so you can see how the project developed; the newer case study shows where it is now.",
     problem:
-      "The week on the planner and the week that actually happens can look a little different. Connecting scheduled activities with the time spent on them helps keep both views useful.",
+      "There's sometimes a difference between the week I put on the planner and the week that actually happens! This version connects planned activities with the time actually spent on them, so there’s a way to keep track when the day takes a different turn.",
     decisions: [
       [
         "Track actual time on the schedule item",
@@ -728,7 +728,7 @@ export const projects = [
     approach:
       "A Bootstrap dashboard starter was adapted into an education-focused interface using HTML, SCSS, and JavaScript. The work involved reorganizing template navigation and content, learning the Sass and Grunt workflow, and deploying the result. Dashboard scripts include ApexCharts demonstrations with sample dates and generated values, establishing the visual direction for time and progress views.",
     outcome:
-      "This 2022 demo is an early piece of the homeschool-tool story, with template-based charts and incomplete functionality. It shows the starting point: adapting an interface, learning the tools, and gradually finding the way toward the later full-stack projects.",
+      "This one goes back to 2022, when I was adapting a dashboard template and learning the tools around it. It’s an unfinished demo with sample chart data, but I’ve kept it alongside the later homeschool projects so you can see where that work began.",
     problem:
       "Subjects, assignments, and learning hours are easier to make sense of when they feel like parts of the same day. This early dashboard was a first attempt at bringing them together.",
     decisions: [
@@ -758,7 +758,7 @@ export const projects = [
     approach:
       "The concept maps entry paths for events, volunteering, resources, and community stories in Miro. It considers both someone arriving for the first time and organizations trying to make participation easier to find. The work concentrates on how content is grouped and how a visitor reaches a useful next step, before committing to a visual interface or application stack.",
     outcome:
-      "Justice Connect stays in the collection as part of my UX foundation: thinking through how people find their way and decide what to do next. The work is at the user-flow and information-architecture stage; wireframes, an interactive prototype, and usability research would come later.",
+      "This one comes from my original UX portfolio, where I was thinking through how people find an opportunity and decide what to do next. It’s at the user-flow and information-architecture stage; wireframes, an interactive prototype, and usability research would come later.",
     problem:
       "Wanting to help is a good beginning, but finding a local event, volunteer opportunity, or useful resource can take some searching. Justice Connect explores how to make that first step easier to find.",
     decisionsTitle: "Design decisions",
