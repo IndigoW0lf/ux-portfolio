@@ -40,13 +40,9 @@ export default function TinyLab() {
         <div className="lab-workspace">
           <div className="lab-setup">
             <span className="lab-pencil-note">
-              same questions, different cues
+              let’s see what a hint can do
             </span>
-            <h3>
-              The question stayed the same.
-              <br />
-              The surrounding words changed.
-            </h3>
+            <h3>What happens when the hint is wrong?</h3>
             <p>
               One model answered the same {study.items} Python code questions in
               three conditions. The peer statements were written into the
