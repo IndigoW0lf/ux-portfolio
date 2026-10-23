@@ -22,7 +22,8 @@ The project retains its Create React App build and React Router hash routes for 
 ## Content & components
 
 - `src/data/projects.js`: project catalog, status, technologies, case-study copy, and public links.
-- `src/components/HomePage.js`: positioning, selected work, approach, experience, and contact.
+- `src/components/HomePage.js`: positioning, selected work, approach, experience, resume download, and contact.
+- `src/components/CuriosityNotes.js`: interactive field notes and a native SVG circuit-moth motif.
 - `src/components/ProjectPage.js`: data-driven case studies and project navigation.
 - `src/components/WorkCollection.js`: category filtering, text search, and empty states.
 - `src/components/EngineeringDemo.js`: deterministic publication-rule example using explicitly illustrative records.
@@ -46,3 +47,7 @@ For a root-domain host, update `homepage` before building. The source project an
 ## Research figures
 
 Agent Behavior Lab has a CLI workflow rather than an application UI. Its portfolio images are research figures, labeled separately from product screenshots, with a link to the published confirmatory report. Rebuild them with `python scripts/render_lab_figures.py` in a Python environment containing matplotlib and Pillow. The script uses the reviewed JSON summary; it does not run evaluations or call model APIs.
+
+## Public resume
+
+The site serves a one-page, selectable-text PDF at `public/resume/Kai-Indigo-Wolf-Resume.pdf`. Rebuild it with `python scripts/render_resume.py` (ReportLab, pypdf, and the system DejaVu fonts). Review the rendered page after any content change before publishing.

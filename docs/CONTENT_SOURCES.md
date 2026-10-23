@@ -103,3 +103,11 @@ Six SVG implementation sketches were authored for Lunara Project, SecondBrain, N
 ## Light voice pass — 2026-10-23
 
 Applied The Lunara Edit Brand Voice at Kai’s request, scaled to a personal engineering portfolio. Warmed project problems and current-state paragraphs, selected summaries/captions, and the home/about/collection introductions. Implementation mechanisms, research results, stack metadata, privacy boundaries, and unfinished-work distinctions are preserved. No new project capabilities or personal anecdotes were added. The site layout is unchanged.
+
+## Personal hero and resume — 2026-10-23
+
+Kai approved a luna-moth/field-notes direction and explicitly authorized merge and deployment. The replacement hero is a native SVG circuit-moth motif with keyboard-operable question notes leading to three existing case studies. It introduces no new product claims.
+
+The supplied career-history text is the source for the public one-page resume and the high-level Pantheon hackathon highlight. It supplies current work, internship and freelance experience, Tech Elevator training, and prior supervisory experience. The resume emphasizes software engineering; the full supplied history and employer incident details are not copied into the site. Public contact links use the portfolio’s existing email, GitHub, and LinkedIn URLs; the resume includes city/state. No street address or phone number is added. No degree completion or graduation date is inferred.
+
+`public/resume/Kai-Indigo-Wolf-Resume.pdf` contains selectable text and clickable contact links. `scripts/render_resume.py` rebuilds it with ReportLab and checks its one-page length and key text. The PDF was rendered and visually inspected before publication.

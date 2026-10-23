@@ -5,8 +5,10 @@ import { projects } from "../data/projects";
 import ProjectVisual from "./ProjectVisual";
 import WorkCollection from "./WorkCollection";
 import EngineeringDemo from "./EngineeringDemo";
+import CuriosityNotes from "./CuriosityNotes";
 
 export default function HomePage() {
+  const resumeUrl = `${process.env.PUBLIC_URL || ""}/resume/Kai-Indigo-Wolf-Resume.pdf`;
   return (
     <>
       <section className="hero shell" id="home">
@@ -37,6 +39,13 @@ export default function HomePage() {
             >
               GitHub <span aria-hidden="true">↗</span>
             </a>
+            <a
+              className="text-link"
+              href={resumeUrl}
+              download="Kai-Indigo-Wolf-Resume.pdf"
+            >
+              Résumé <span aria-hidden="true">↓</span>
+            </a>
           </div>
           <div className="hero-context">
             <span>Currently</span>
@@ -45,44 +54,7 @@ export default function HomePage() {
             <strong>Building at Lunara LLC</strong>
           </div>
         </div>
-        <div className="hero-art" aria-hidden="true">
-          <div className="art-top">
-            <span>FROM A REAL PROBLEM</span>
-            <span>01 — ∞</span>
-          </div>
-          <div className="orbit orbit-one" />
-          <div className="orbit orbit-two" />
-          <div className="art-core">
-            <span>
-              human
-              <br />
-              <em>first.</em>
-            </span>
-          </div>
-          <div className="art-node node-interface">
-            <span>01</span>
-            <strong>Interfaces</strong>
-            <small>Clear ways in</small>
-          </div>
-          <div className="art-node node-system">
-            <span>02</span>
-            <strong>Systems</strong>
-            <small>Structure underneath</small>
-          </div>
-          <div className="art-node node-evidence">
-            <span>03</span>
-            <strong>Evidence</strong>
-            <small>Reasons to trust it</small>
-          </div>
-          <div className="art-bottom">
-            <span>
-              A DESIGNER’S EYE.
-              <br />
-              AN ENGINEER’S CURIOSITY.
-            </span>
-            <span>↗</span>
-          </div>
-        </div>
+        <CuriosityNotes />
       </section>
       <div className="stack-strip">
         <div className="shell">
@@ -253,8 +225,12 @@ export default function HomePage() {
                 </div>
                 <p>Software Engineer · Frontend</p>
                 <small>
-                  React, TypeScript, Apollo, routing, testing, and production
-                  collaboration.
+                  React, TypeScript, Apollo, authentication, routing, and
+                  automated testing.
+                </small>
+                <small className="experience-highlight">
+                  Led the Unified Notifications Hub: People’s Choice, 1st Place,
+                  and Overall, 2nd Place, at the 2026 Pantheon Hackathon.
                 </small>
               </article>
               <article>
@@ -291,6 +267,25 @@ export default function HomePage() {
           <a className="contact-email" href="mailto:kai.indigo.wolf@gmail.com">
             kai.indigo.wolf@gmail.com
           </a>
+          <nav className="contact-links" aria-label="Contact and résumé links">
+            <a
+              href="https://github.com/IndigoW0lf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub ↗
+            </a>
+            <a
+              href="https://www.linkedin.com/in/indigowolf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn ↗
+            </a>
+            <a href={resumeUrl} download="Kai-Indigo-Wolf-Resume.pdf">
+              Download résumé (PDF) ↓
+            </a>
+          </nav>
         </div>
       </section>
     </>

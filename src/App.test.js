@@ -133,3 +133,27 @@ test("research figures are labeled as figures and retain a report source", () =>
     }),
   ).toHaveAttribute("target", "_blank");
 });
+
+test("field notes keep the selected question and destination together", () => {
+  render(<App />);
+  const notes = screen.getByRole("complementary", {
+    name: "A few threads from my work",
+  });
+  fireEvent.click(
+    within(notes).getByRole("button", { name: /why did the answer change/i }),
+  );
+  expect(
+    within(notes).getByRole("link", { name: /Agent Behavior Lab/ }),
+  ).toHaveAttribute("href", "#/projects/agent-behavior-lab");
+  expect(
+    within(notes).getByRole("button", {
+      name: /Could this feel more like an adventure/i,
+    }),
+  ).toHaveAttribute("aria-pressed", "false");
+  fireEvent.click(
+    within(notes).getByRole("link", { name: /Agent Behavior Lab/ }),
+  );
+  expect(
+    screen.getByRole("heading", { level: 1, name: "Agent Behavior Lab" }),
+  ).toBeInTheDocument();
+});
