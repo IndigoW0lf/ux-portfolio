@@ -1812,10 +1812,80 @@
   color: var(--muted);
   margin-top: 4px;
 }
-.lab-setup .lab-baseline {
+.lab-setup .lab-instructions {
   border-top: 1px dashed #bcc2b2;
   padding-top: 20px;
+  margin-top: 22px;
   margin-bottom: 20px;
+}
+.lab-setup-context {
+  margin-top: 18px;
+}
+.lab-progress {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  gap: 12px;
+  padding: 0;
+  margin: 24px 0;
+}
+.lab-progress li {
+  font-size: 10px;
+  line-height: 1.5;
+  color: var(--muted);
+  border-bottom: 2px solid var(--line);
+  padding-bottom: 10px;
+}
+.lab-progress li > span {
+  display: block;
+  width: 23px;
+  height: 23px;
+  margin-bottom: 8px;
+  text-align: center;
+  line-height: 23px;
+  border: 1px solid #b7bbaa;
+  border-radius: 50%;
+}
+.lab-progress li[data-done="true"] > span {
+  background: #e5e9dc;
+}
+.lab-progress li[aria-current="step"] {
+  color: var(--violet);
+  border-bottom-color: var(--violet);
+  font-weight: 600;
+}
+.lab-progress li[aria-current="step"] > span {
+  color: #fff;
+  background: var(--violet);
+  border-color: var(--violet);
+}
+.lab-round-context > p,
+.lab-summary-intro {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 16px;
+}
+.lab-guess-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 24px;
+}
+.lab-round-result {
+  margin-top: 24px;
+}
+.lab-round-result > p + p {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.lab-recorded-note,
+.lab-saved-guess {
+  font-size: 11px;
+  color: var(--muted);
+}
+.lab-saved-guess {
+  margin-top: 6px;
 }
 .lab-notebook {
   background: #fcfbf6;
@@ -1947,6 +2017,7 @@
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
   padding: 7px 0;
+  gap: 18px;
 }
 .lab-pairs dd {
   margin: 0;
