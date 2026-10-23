@@ -17,7 +17,7 @@ export default function SiteHeader() {
         </Link>
         <nav aria-label="Main navigation">
           <HashLink to="/#work">Work</HashLink>
-          <HashLink to="/#approach">Approach</HashLink>
+          <HashLink to="/#tiny-lab">Tiny lab</HashLink>
           <HashLink to="/#about">About</HashLink>
           <HashLink className="nav-contact" to="/#contact">
             Let’s talk <span aria-hidden="true">↗</span>

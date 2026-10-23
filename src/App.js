@@ -3,6 +3,7 @@ import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import SiteHeader from "./components/SiteHeader";
 import HomePage from "./components/HomePage";
 import ProjectPage from "./components/ProjectPage";
+import PortfolioAnalytics from "./components/PortfolioAnalytics";
 import { projects } from "./data/projects";
 import "./App.css";
 
@@ -31,6 +32,7 @@ export default function App() {
   return (
     <HashRouter>
       <RouteEffects />
+      <PortfolioAnalytics />
       <a
         className="skip-link"
         href="#main-content"
